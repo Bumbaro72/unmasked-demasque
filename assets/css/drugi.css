@@ -79,7 +79,12 @@
 }
 /* SVG */
 .svg-anim {
-  width: fit-content;
+  overflow: hidden; /* Makni skrol */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .svg-anim svg path {
