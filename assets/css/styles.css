@@ -89,20 +89,7 @@ html {
     width: 100%;
 }
 
-/* NAVIGACIJA I FOOTER */
-.Nav--glavni {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
 
-.Footer--glavni {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1000;
-}
 /* Reset */
 * {
     margin: 0;
@@ -156,10 +143,12 @@ html {
   
   /* Navigation - Split Screen */
 .nav--glavni {
+  position: fixed;
   display: flex;
   height: 60px;
   letter-spacing: 1.0px;
   z-index: 200;
+  width: 100%;
 }
 
 .nav--lijevo, .nav--deano {
@@ -193,4 +182,58 @@ nav a {
 .nav--deano a {
   color: white;
 }
-  
+
+.Glavni-Footer {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Sakrij footer na mobilnim verzijama */
+@media (max-width: 1024px) {
+  .Glavni-Footer {
+    display: none;
+  }
+}
+
+/* Galerija Cjeline */
+.Galerija-Cjelina {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh; /* Cijela visina kao ostale cjeline */
+}
+
+/* Video full width */
+.Galerija-Video {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Foto red – 4 bloka */
+.Galerija-FotoRed {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 kolone */
+  grid-template-rows: repeat(2, 1fr);    /* 2 reda */
+  width: 100%;
+  height: 100vh;
+}
+
+
+.Blok--crni {
+  background-color: black;
+}
+
+.Blok--bijeli {
+  background-color: white;
+}
+
