@@ -1,0 +1,195 @@
+/* ====== GLOBALNE POSTAVKE ====== */
+:root {
+    /* Boje */
+    --crna: #000000;
+    --bijela: #FFFFFF;
+    --siva: #EEEEEE;
+    
+    /* Tipografija */
+    --font-regular: 'Helvetica Neue', Arial, sans-serif;
+    --font-bold: 'Helvetica Neue Bold', Arial, sans-serif;
+    
+    /* Razmaci */
+    --base-padding: 2rem;
+    --base-margin: 1.5rem;
+}
+
+/* ====== RESET I BAZNI STILOVI ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-regular);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ====== TIPOGRAFIJA ====== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: var(--base-margin);
+}
+
+.Naslov--veliki { font-size: 3rem; letter-spacing: 0.5rem; }
+.Naslov--srednji { font-size: 2rem; letter-spacing: 0.3rem; }
+.Naslov--mali { font-size: 1.5rem; }
+
+.Tekst--istaknuti { font-size: 1.2rem; line-height: 1.8; }
+.Tekst--standardni { font-size: 1rem; }
+.Tekst--sitni { font-size: 0.8rem; }
+
+/* ====== BLOK SISTEM ====== */
+[class*="Cjelina"] {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+}
+
+[class*="-Lijevo"], [class*="-Desno"] {
+    flex: 1;
+    display: flex;
+    padding: var(--base-padding);
+}
+
+.Blok-unutrasnjost {
+    max-width: 80%;
+    margin: auto;
+}
+
+.Blok--crni { background: var(--crna); color: var(--bijela); }
+.Blok--bijeli { background: var(--bijela); color: var(--crna); }
+.Blok--sivi { background: var(--siva); color: var(--crna); }
+
+/* ====== STRUKTURA STRANICA ====== */
+/* Home Page Specific */
+.Home-Cjelina .Home-Lijevo {
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Overview Page Specific */
+.Overview-Cjelina .Overview-Desno {
+    align-items: flex-end;
+}
+
+/* ====== SCROLL SISTEM ====== */
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+
+/* GLAVNI WRAPPER */
+.Stranica {
+    position: relative;
+    z-index: 1;
+    overflow: hidden; /* Sprječava nepotrebno skrolanje */
+}
+
+/* NAVIGACIJA I FOOTER */
+.Nav--glavni {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.Footer--glavni {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Debug klasa - pomoćna za razvoj */
+.debug * {
+    outline: 1px solid red !important;
+}
+
+/* ====== MOBILNA VERZIJA ====== */
+@media (max-width: 768px) {
+    :root {
+        --base-padding: 1rem;
+    }
+    
+    [class*="Cjelina"] {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    /* Prikaz samo jednog jezika */
+    [class*="-Desno"] {
+        display: none;
+    }
+    
+    body.show-french [class*="-Desno"] {
+        display: flex;
+    }
+    
+    body.show-french [class*="-Lijevo"] {
+        display: none;
+    }
+    
+    .Naslov--veliki {
+        font-size: 2rem;
+    }
+}
+
+/* ===== MOBILNI JEZIČNI IZBORNIK ===== */
+.mobile-lang-selector {
+    display: none; /* Sakriveno na desktopu */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2000;
+    flex-direction: column;
+}
+
+/* Portrait mode (default) */
+.mobile-lang-selector {
+    flex-direction: column;
+}
+.lang-option {
+    flex: 1;
+    display: flex;
+}
+.lang-block {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Landscape mode */
+@media (orientation: landscape) {
+    .mobile-lang-selector {
+        flex-direction: row;
+    }
+}
+
+/* Sakrij selector nakon izbora */
+body.lang-selected .mobile-lang-selector {
+    display: none;
+}
+
+/* Prikaz samo odabranog jezika */
+body.lang-en [class*="-Desno"],
+body.lang-fr [class*="-Lijevo"] {
+    display: none !important;
+}
+
+/* Prikaz cjelina u odabranom jeziku */
+body.lang-en [class*="-Lijevo"],
+body.lang-fr [class*="-Desno"] {
+    display: flex;
+}
