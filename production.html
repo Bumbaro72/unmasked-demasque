@@ -7,32 +7,42 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/drugi.css">
     <script src="assets/js/main.js"></script>
+    <script>
+        if (window.innerWidth < 1024) {
+          window.location.href = "index-mobile.html";
+        }
+      </script>
 </head>
     <!--Navigacija -->
     <nav class="nav--glavni">
         <div class="nav--lijevo">
-            <a href="index.html">UNMASKED</a> |
-            <a href="overview.html">OVERVIEW</a> |
-            <a href="production.html">PRODUCTION</a> |
-            <a href="gallery.html">GALLERY</a> |
-            <a href="contact.html">CONTACT</a>
+            <ul>
+                <li class="efekt-underline"><a href="index.html">UNMASKED</a> |</li>
+                <li class="efekt-underline"><a href="overview.html">OVERVIEW</a> |</li>
+                <li class="efekt-underline"><a href="production.html">PRODUCTION</a> |</li>
+                <li class="efekt-underline"><a href="gallery.html">GALLERY</a> |</li>
+                <li class="efekt-underline"><a href="contact.html">CONTACT</a></li>
+            </ul>
             </div>
         <div class="nav--deano">
-            <a href="index.html" class="dark-link">DÉMASQUÉ</a> |
-            <a href="overview.html" class="dark-link">APERÇU</a> |
-            <a href="production.html" class="dark-link">PRODUCTION</a> |
-            <a href="gallery.html" class="dark-link">GALERIE</a> |
-            <a href="contact.html" class="dark-link">CONTACT</a>
+                <li class="efekt-underline"><a href="index.html" class="dark-link">DÉMASQUÉ</a> |
+                <li class="efekt-underline"><a href="overview.html" class="dark-link">APERÇU</a> |
+                <li class="efekt-underline"><a href="production.html" class="dark-link">PRODUCTION</a> |
+                <li class="efekt-underline"><a href="gallery.html" class="dark-link">GALERIE</a> |
+                <li class="efekt-underline"><a href="contact.html" class="dark-link">CONTACT</a>
         </div>
     </nav>
     
     <!-- Production  -->
  
     <div class="Stranica">
-        <div class="Production-Cjelina Cjelina--prva">
-            <div class="Home-Lijevo Blok--crni">
+        <div class="Production-Cjelina Cjelina--prva efekt-unmasking">
+            <div class="mask-lijevo"></div>
+            <div class="mask-desno"></div>
+            <div class="Production-Lijevo Blok--crni">
               <div class="Blok-unutrasnjost">
                     <!-- SVG animacija ovdje -->
+                    <div class="svg-anim">
                     <svg class="unmasking-timeline" width="600" height="700" xmlns="http://www.w3.org/2000/svg">
                         <!-- Animirana linija (stroke animation) -->
                         <line class="timeline-path" y2="600" x2="100" y1="50" x1="100" stroke-width="4" stroke="#ffffff">
@@ -75,11 +85,13 @@
                             <text x="140" y="508" class="phase-subtitle">Amplifying the unmasked message</text>
                         </g>
                     </svg>
+                </div>
               </div>
             </div>
             <div class="Home-Desno Blok--bijeli">
               <div class="Blok-unutrasnjost">
                 <!-- SVG animacija ovdje -->
+                <div class="svg-anim">
                 <svg class="unmasking-timeline" width="600" height="700" xmlns="http://www.w3.org/2000/svg">
                     <!-- Animirana linija (stroke animation) -->
                     <line class="timeline-path" y2="600" x2="100" y1="50" x1="100" stroke-width="4" stroke="#000000">
@@ -122,17 +134,104 @@
                     <text x="140" y="508" class="phase-subtitle-fr">Distribution & Campagne d'Impact</text>
                 </g>
                 </svg>
+                </div>
               </div>
             </div>
           </div>
-        <div class="Production-Cjelina Cjelina--druga">
-            <div class="Home-Lijevo Blok--bijeli">
+        <div class="Production-Cjelina Cjelina--druga efekt-unmasking">
+            <div class="mask-lijevo"></div>
+            <div class="mask-desno"></div>
+            <div class="Production-Lijevo Blok--bijeli">
                 <div class="Blok-unutrasnjost">
-                    <h1 class="Naslov--veliki">L2</h1>
-                    <p class="Tekst--istaknuti">English content here</p>
+                    <div class="svg-anim">
+                        <!-- Klapa -->
+                            <div class="klapa">
+                                <div class="klapa-dolje">
+                                    <div class="klapa-sadrzaj">
+                                        <svg class="klapa-vrh" viewBox="0 0 500 50" xmlns="http://www.w3.org/2000/svg">
+                                            <g class="partner-grid" transform="translate(10, 150)">
+                                                <rect x="30" y="-144" width="60" height="36" fill="#505050" stroke="#000000" rx="3"/></g>
+                                            <g class="partner-grid" transform="translate(10, 150)">
+                                                <rect x="150" y="-144" width="60" height="36" fill="#505050" stroke="#000000" rx="3"/></g>
+                                            <g class="partner-grid" transform="translate(10, 150)">
+                                                <rect x="270" y="-144" width="60" height="36" fill="#505050" stroke="#000000" rx="3"/></g>
+                                            <g class="partner-grid" transform="translate(10, 150)">
+                                                <rect x="390" y="-144" width="60" height="36" fill="#505050" stroke="#000000" rx="3"/></g>
+                                            <path class="klapa-linija" d="M00,48 L500,48" stroke="#000000" stroke-width="2"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <!-- Klapa pola -->
+                                <div class="klapa-gore">
+                                    <div class="klapa-lijevo-en">
+                                        <div class="klapa-sadrzaj">
+                                            <svg class="klapa-vrh" xmlns="http://www.w3.org/2000/svg">
+                                              <!-- Interaktivni segmenti -->
+                                              <g class="klapa-dio" data-section="budget">
+                                                <rect x="5" y="5" width="278" height="144" fill="transparent" stroke="transparent" stroke-width="2"/>
+                                                <text x="68" y="50" class="clap-title2">PRODUCTION</text>
+                                                <text x="115" y="80" class="clap-content2">GRANTS</text>
+                                                <text x="80" y="100" class="clap-content2">CO-PRODUCTIONS</text>
+                                                <text x="95" y="120" class="clap-content2">TAX SHELTER </text>
+                                              </g>
+                                            </svg>
+                                          </div>
+                                    </div>
+                                    <div class="klapa-desno-en">
+                                        <div class="normal-view2">BUDGET</div>
+                                        <div class="hover-view">
+                                            <div class="klapa-sadrzaj">
+                                                <svg class="klapa-vrh"  xmlns="http://www.w3.org/2000/svg">
+                                                    <g class="klapa-dio" data-section="budget">
+                                                      </g>
+                                                   <!-- Transparentno Polje -->
+                                                    <rect x="0" y="0" width="290" height="180" fill="url(#transparency)" rx="5"/>
+                                                    <text x="140" y="70" text-anchor="middle" font-size="20" fill="#FF0000" font-weight="bold">FULL TRANSPARENT</text>
+                                                    <text x="140" y="90" text-anchor="middle" font-size="20" fill="#000000" font-weight="bold">BUDGET OVERVIEW</text>
+                                                    <defs>
+                                                        <pattern id="transparency" width="20" height="20" patternUnits="userSpaceOnUse">
+                                                          <rect width="10" height="10" fill="#fff"/>
+                                                          <rect x="10" y="10" width="10" height="10" fill="#fff"/>
+                                                          <rect x="10" y="0" width="10" height="10" fill="#ccc"/>
+                                                          <rect x="0" y="10" width="10" height="10" fill="#ccc"/>
+                                                        </pattern>
+                                                      </defs>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Klapa (dolje) -->
+                                <div class="klapa-dolje">
+                                    <div class="klapa-sadrzaj">
+                                        <svg class="klapa-vrh" viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="klapa-linija" d="M00,10 L500,10" stroke="#000000" stroke-width="2"/>
+                                            <path class="klapa-linija" d="M00,140 L500,140" stroke="#000000" stroke-width="2"/>
+                                            <text x="250" y="95" text-anchor="middle" font-size="72" fill="#BCBCBC" class="action-text">
+                                                ACTION
+                                            <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
+                                            </text>
+                                            <g class="partner-grid" transform="translate(10, 150)">
+                                            <rect x="0" y="0" width="160" height="70" fill="#ffffff" stroke="#505050" rx="3"/>
+                                            <image x="10" y="10" width="80" height="20" xlink:href="partner1.svg" opacity="0.8"/>
+                                            </g>
+                                            <g class="partner-grid" transform="translate(175, 150)">
+                                            <rect x="0" y="0" width="150" height="70" fill="#ffffff" stroke="#505050" rx="3"/>
+                                            <image x="10" y="10" width="80" height="20" xlink:href="partner1.svg" opacity="0.8"/>
+                                            </g>
+                                            <g class="partner-grid" transform="translate(330, 150)">
+                                            <rect x="0" y="0" width="160" height="70" fill="#ffffff" stroke="#505050" rx="3"/>
+                                            <image x="10" y="10" width="80" height="20" xlink:href="partner1.svg" opacity="0.8"/>
+                                            </g>
+                                        </svg>
+                                      </div>
+                                </div>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="Home-Desno Blok--crni">
+            <div class="Production-Desno Blok--crni">
                 <div class="Blok-unutrasnjost">
                     <h1 class="Naslov--veliki">D2</h1>
                     <p class="Tekst--istaknuti">Contenu en français ici</p>
@@ -140,13 +239,46 @@
             </div>
         </div>
         <div class="Production-Cjelina Cjelina--treca">
-            <div class="Home-Lijevo Blok--crni">
+            <div class="Production-Lijevo Blok--crni">
                 <div class="Blok-unutrasnjost">
-                    <h1 class="Naslov--veliki">L3</h1>
-                    <p class="Tekst--istaknuti">English content here</p>
+                    <h2>Don’t look further<br>LOOK DEEPER.</h2>
+                <p>Join the Journey of UNMASKED</p>
+                <div class="credits-box">
+                    <div class="film-screen">
+                        <div class="credits-scroll">
+                            <h3>Discover the man behind the legend.</h3>
+                            <br>
+                            <br>
+                            <p> Invest in a story that reveals what we usually hide.<br>  
+                                The face is not a mask – but a mirror of society.<br>
+                                Support a feature-length documentary that changes perspectives
+                            <br>- not just on the face, but on humanity itself.<br>  
+                                This is a project with a universal theme and market potential
+                            <br>and opportunity to stand out financially,creatively, and ethically.</p><br>
+                            <h4>- Thematic relevance</h4><br>
+                            <h4>- Festival potential</h4><br>
+                            <h4>- European co-production</h4><br>
+                            <h4>- Tax Shelter opportunities in Belgium</h4>
+                            <br>
+                            <br>
+                            <h2>We’re not just selling a story
+                            <br>we’re offering you the chance
+                            <br>to be part of the change.</h2>
+                            <br>
+                            <br>
+                            <h3>YOUR LOGO</h3>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                        <h3>This story is moving forward
+                        <br>the question is: will you join us?</h3>
+                    <a href="#" class="cta-button-fr">Join the Journey</a>
+                </div>
                 </div>
             </div>
-            <div class="Home-Desno Blok--bijeli">
+            <div class="Production-Desno Blok--bijeli">
                 <div class="Blok-unutrasnjost">
                     <h1 class="Naslov--veliki">D3</h1>
                     <p class="Tekst--istaknuti">Contenu en français ici</p>
@@ -154,13 +286,13 @@
             </div>
         </div>
         <div class="Production-Cjelina Cjelina--cetvrta">
-            <div class="Home-Lijevo Blok--bijeli">
+            <div class="Production-Lijevo Blok--bijeli">
                 <div class="Blok-unutrasnjost">
                     <h1 class="Naslov--veliki">L4</h1>
                     <p class="Tekst--istaknuti">English content here</p>
                 </div>
             </div>
-            <div class="Home-Desno Blok--crni">
+            <div class="Production-Desno Blok--crni">
                 <div class="Blok-unutrasnjost">
                     <h1 class="Naslov--veliki">D4</h1>
                     <p class="Tekst--istaknuti">Contenu en français ici</p>

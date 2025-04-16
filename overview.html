@@ -7,22 +7,29 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/drugi.css">
     <script src="assets/js/main.js"></script>
+    <script>
+        if (window.innerWidth < 1024) {
+          window.location.href = "index-mobile.html";
+        }
+      </script>
 </head>
     <!--Navigacija -->
     <nav class="nav--glavni">
         <div class="nav--lijevo">
-            <a href="index.html">UNMASKED</a> |
-            <a href="overview.html">OVERVIEW</a> |
-            <a href="production.html">PRODUCTION</a> |
-            <a href="gallery.html">GALLERY</a> |
-            <a href="contact.html">CONTACT</a>
+            <ul>
+                <li class="efekt-underline"><a href="index.html">UNMASKED</a> |</li>
+                <li class="efekt-underline"><a href="overview.html">OVERVIEW</a> |</li>
+                <li class="efekt-underline"><a href="production.html">PRODUCTION</a> |</li>
+                <li class="efekt-underline"><a href="gallery.html">GALLERY</a> |</li>
+                <li class="efekt-underline"><a href="contact.html">CONTACT</a></li>
+            </ul>
             </div>
         <div class="nav--deano">
-            <a href="index.html" class="dark-link">DÉMASQUÉ</a> |
-            <a href="overview.html" class="dark-link">APERÇU</a> |
-            <a href="production.html" class="dark-link">PRODUCTION</a> |
-            <a href="gallery.html" class="dark-link">GALERIE</a> |
-            <a href="contact.html" class="dark-link">CONTACT</a>
+                <li class="efekt-underline"><a href="index.html" class="dark-link">DÉMASQUÉ</a> |
+                <li class="efekt-underline"><a href="overview.html" class="dark-link">APERÇU</a> |
+                <li class="efekt-underline"><a href="production.html" class="dark-link">PRODUCTION</a> |
+                <li class="efekt-underline"><a href="gallery.html" class="dark-link">GALERIE</a> |
+                <li class="efekt-underline"><a href="contact.html" class="dark-link">CONTACT</a>
         </div>
     </nav>
     
