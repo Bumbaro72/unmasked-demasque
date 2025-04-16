@@ -148,40 +148,41 @@ box-sizing: border-box;
   padding-right: 1rem; /* za scrollbar da ne sjeda na tekst */
 }
 
-.efekt-unmasking,
-.efekt-unmasking-desno {
+.efekt-unmasking {
   position: relative;
   overflow: hidden;
-  width: 50%;
 }
 
-.mask {
+.mask-lijevo,
+.mask-desno {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
   height: 100%;
-  background: black; /* sve maske su crne */
+  width: 50%;
+  background-color: black;
   z-index: 2;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }
 
-/* Lijeva strana otkriva se ulijevo */
-.efekt-unmasking .mask {
-  animation: unmask-left 1.2s ease forwards;
+.mask-lijevo {
+  left: 0;
+  animation-name: maskLijevo;
 }
 
-/* Desna strana otkriva se udesno */
-.efekt-unmasking-desno .mask {
-  animation: unmask-right 1.2s ease forwards;
+.mask-desno {
+  right: 0;
+  animation-name: maskDesno;
 }
 
-@keyframes unmask-left {
-  0%   { transform: translateX(0%); }
+/* ANIMACIJE */
+@keyframes maskLijevo {
+  0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
 
-@keyframes unmask-right {
-  0%   { transform: translateX(0%); }
+@keyframes maskDesno {
+  0% { transform: translateX(0); }
   100% { transform: translateX(100%); }
 }
 
@@ -282,3 +283,91 @@ nav a {
   background-color: white;
 }
 
+
+/* Wrapper */
+.efekt-underline {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Sam tekst */
+.efekt-underline .naslov {
+  position: relative;
+  display: inline-block;
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+}
+
+/* UNDERLINE */
+.efekt-underline .naslov::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 0%;
+  background-color: currentColor;
+  transition: width 0.4s ease;
+}
+
+/* TRIGGER preko roditelja */
+.efekt-underline:hover .naslov {
+  opacity: 1;
+}
+
+.efekt-underline:hover .naslov::after {
+  width: 100%;
+}
+
+/* Sve heading vrijednosti unutar Blok-unutrasnjost */
+.Blok-unutrasnjost h1,
+.Blok-unutrasnjost h2,
+.Blok-unutrasnjost h3,
+.Blok-unutrasnjost h4 {
+  position: relative;
+  display: inline-block;
+  opacity: 0.3;
+  transition: opacity 0.4s ease;
+}
+
+.Blok-unutrasnjost h1::after,
+.Blok-unutrasnjost h2::after,
+.Blok-unutrasnjost h3::after,
+.Blok-unutrasnjost h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 0%;
+  background-color: currentColor;
+  transition: width 0.4s ease;
+}
+
+.Blok-unutrasnjost:hover h1,
+.Blok-unutrasnjost:hover h2,
+.Blok-unutrasnjost:hover h3,
+.Blok-unutrasnjost:hover h4 {
+  opacity: 1;
+}
+
+.Blok-unutrasnjost:hover h1::after,
+.Blok-unutrasnjost:hover h2::after,
+.Blok-unutrasnjost:hover h3::after,
+.Blok-unutrasnjost:hover h4::after {
+  width: 100%;
+}
+
+.Blok-unutrasnjost p {
+  opacity: 0.15;
+  transition: opacity 0.8s ease;
+}
+
+.Blok-unutrasnjost:hover p {
+  opacity: 1;
+}
+
+.Blok-unutrasnjost p {
+  opacity: 0.15;
+  transition: opacity 0.8s ease 0.2s; /* 0.2s delay */
+}
