@@ -37,33 +37,32 @@
  
     <div class="Stranica">
 
-        <!-- RED 1: Video Teaser -->
-        <div class="Galerija-Cjelina">
-          <div class="Galerija-Video Blok--crni">
-            <!-- VIDEO TEASER ovdje -->
-          </div>
-        </div>
-      
-        <!-- RED 2: Foto Galerija (4 crno-bijele kocke) -->
-        <div class="Galerija-Cjelina Galerija-FotoRed">
-            <div class="Galerija-Foto Blok--crni"></div>
-            <div class="Galerija-Foto Blok--bijeli"></div>
-            <div class="Galerija-Foto Blok--crni"></div>
-            <div class="Galerija-Foto Blok--bijeli"></div>
-          
-            <div class="Galerija-Foto Blok--bijeli"></div>
-            <div class="Galerija-Foto Blok--crni"></div>
-            <div class="Galerija-Foto Blok--bijeli"></div>
-            <div class="Galerija-Foto Blok--crni"></div>
-          </div>
-          
-      
-        <!-- RED 3: Video Trailer -->
-        <div class="Galerija-Cjelina">
-          <div class="Galerija-Video Blok--crni">
-            <!-- VIDEO TRAILER ovdje -->
-          </div>
-        </div>
+      <section class="gallery-teaser">
+        <video controls poster="./images/teaser-poster.jpg" class="video-full">
+          <source src="./videos/teaser.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+    
+      <!-- Gallery Grid -->
+      <section class="gallery-grid">
+        <div class="gallery-cell white"></div>
+        <div class="gallery-cell black"></div>
+        <div class="gallery-cell black"></div>
+        <div class="gallery-cell white"></div>
+        <div class="gallery-cell white"></div>
+        <div class="gallery-cell black"></div>
+        <div class="gallery-cell black"></div>
+        <div class="gallery-cell white"></div>
+      </section>
+    
+      <!-- Video Trailer -->
+      <section class="gallery-trailer">
+        <video controls poster="./images/trailer-poster.jpg" class="video-full">
+          <source src="./videos/trailer.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
       
       </div>
       

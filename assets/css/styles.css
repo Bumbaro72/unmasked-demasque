@@ -248,21 +248,36 @@ nav a {
     display: none;
   }
 }
-
-/* Galerija Cjeline */
-.Galerija-Cjelina {
-  display: flex;
-  flex-direction: row;
+.video-full {
   width: 100%;
-  min-height: 100vh; /* Cijela visina kao ostale cjeline */
+  max-height: 80vh;
+  object-fit: cover;
 }
 
-/* Video full width */
-.Galerija-Video {
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: auto;
+}
+
+.gallery-cell {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.gallery-cell.white {
+  background-color: #fff;
+}
+
+.gallery-cell.black {
+  background-color: #000;
+}
+
+.gallery-teaser,
+.gallery-trailer {
+  padding: 2rem 0;
 }
 
 /* Foto red – 4 bloka */

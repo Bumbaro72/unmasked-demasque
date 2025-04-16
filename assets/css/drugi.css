@@ -79,12 +79,21 @@
 }
 /* SVG */
 .svg-anim {
-  overflow: hidden; /* Makni skrol */
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+  padding: 0;       /* sigurnosno */
+  margin: 0;        /* sigurnosno */
+}
+.svg-anim svg {
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+  display: block;
 }
 
 .svg-anim svg path {
