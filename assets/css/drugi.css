@@ -1,0 +1,168 @@
+/* Button Styling */
+.cta-button-en {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Underline effect on hover */
+.cta-button-en::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.cta-button-en:hover {
+  background-color: white;
+  color: black;
+}
+
+.cta-button-en:hover::after {
+  width: 100%;
+}
+
+/* Button Styling */
+.cta-button-fr {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  text-decoration: none;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgb(255, 255, 255);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Underline effect on hover */
+.cta-button-fr::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.cta-button-fr:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.cta-button-fr:hover::after {
+  width: 100%;
+}
+/* SVG */
+.svg-anim {
+  width: 100%;
+}
+
+.svg-anim svg path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  transition: stroke-dashoffset 2s ease;
+}
+
+.svg-anim.animate-svg svg path {
+  stroke-dashoffset: 0;
+}
+.unmasking-timeline {
+  font-family: 'Inter', sans-serif;
+}
+
+.phase-point {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.phase-point:hover circle {
+  fill: #7c7c7c;
+  filter: drop-shadow(0 0 8px #848484);
+}
+
+.phase-title {
+  opacity: 0.1;
+  font-size: 18px;
+  fill: #fff;
+  transition: opacity 0.3s;
+}
+
+.phase-subtitle {
+  opacity: 0.9;
+  font-size: 16px;
+  font-style: italic;
+  fill: #dfdfdf;
+  transition: opacity 0.3s;
+}
+
+.phase-title-fr {
+  opacity: 0.1;
+  font-size: 18px;
+  fill: #000;
+  transition: opacity 0.3s;
+}
+
+.phase-subtitle-fr {
+  opacity: 0.9;
+  font-size: 16px;
+  font-style: italic;
+  fill: #444;
+  transition: opacity 0.3s;
+}
+
+.phase-point:hover .phase-title {
+  opacity: 1;
+}
+
+.phase-point:hover .phase-title-fr {
+  opacity: 1;
+}
+
+.timeline-container:hover .timeline-svg {
+  opacity: 1;
+}
+.timeline-svg {
+  opacity: 0.5;
+  transition: opacity 2s ease;
+}
+.timeline-container:hover .phase-dot {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.timeline-path {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: drawLine 2s forwards;
+}
+
+@keyframes drawLine {
+  to { stroke-dashoffset: 0; }
+}

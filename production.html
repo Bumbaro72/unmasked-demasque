@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNMASKED - Demasqué</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/drugi.css">
     <script src="assets/js/main.js"></script>
 </head>
     <!--Navigacija -->
@@ -25,24 +26,106 @@
         </div>
     </nav>
     
-    <!-- Home  -->
+    <!-- Production  -->
  
     <div class="Stranica">
-        <div class="Home-Cjelina Cjelina--prva">
+        <div class="Production-Cjelina Cjelina--prva">
             <div class="Home-Lijevo Blok--crni">
               <div class="Blok-unutrasnjost">
-                <h1>Naslov-veliki</h1>
-                    <p>English content here</p>
+                    <!-- SVG animacija ovdje -->
+                    <svg class="unmasking-timeline" width="600" height="700" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Animirana linija (stroke animation) -->
+                        <line class="timeline-path" y2="600" x2="100" y1="50" x1="100" stroke-width="4" stroke="#ffffff">
+                        <animate attributeName="y2" from="50" to="550" dur="2s" fill="freeze"/>
+                        </line>
+                        <!-- Interaktivne točke -->
+                        <g class="phase-point" data-phase="1">
+                        <circle cx="100" cy="100" r="12" fill="#ffffff" stroke="#000000" stroke-width="3">
+                            <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                        <text x="140" y="78" class="phase-title">Unmasking the truth begins with curiosity</text>
+                        <text x="140" y="105" class="phase-subtitle">Development &amp; Research</text>
+                        </g>
+                        <g class="phase-point" data-phase="1">
+                            <circle cx="100" cy="200" r="12" fill="#ffffff" stroke="#000000" stroke-width="3">
+                            <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
+                            </circle>
+                            <text x="140" y="182" class="phase-title">Laying the groundwork for revelation</text>
+                            <text x="140" y="208" class="phase-subtitle">Pre-production</text>
+                        </g>
+                        <g class="phase-point" data-phase="1">
+                            <circle cx="100" cy="300" r="12" fill="#ffffff" stroke="#000000" stroke-width="3">
+                            <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
+                            </circle>
+                            <text x="140" y="280" class="phase-title">Capturing raw truths on camera</text>
+                            <text x="140" y="306" class="phase-subtitle">Principal Photography</text>
+                        </g>
+                        <g class="phase-point" data-phase="1">
+                            <circle cx="100" cy="400" r="12" fill="#ffffff" stroke="#000000" stroke-width="3">
+                            <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
+                            </circle>
+                            <text x="140" y="382" class="phase-title">Crafting the narrative puzzle</text>
+                            <text x="140" y="407" class="phase-subtitle">Post-production & Editing</text>
+                        </g>
+                        <g class="phase-point" data-phase="1">
+                            <circle cx="100" cy="500" r="12" fill="#ffffff" stroke="#000000" stroke-width="3">
+                            <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
+                            </circle>
+                            <text x="140" y="486" class="phase-title">Distribution & Impact Campaign</text>
+                            <text x="140" y="508" class="phase-subtitle">Amplifying the unmasked message</text>
+                        </g>
+                    </svg>
               </div>
             </div>
             <div class="Home-Desno Blok--bijeli">
               <div class="Blok-unutrasnjost">
-                <h1>FRANCUSKI VELIKI</h1>
-                    <p>Contenu en français ici</p>
+                <!-- SVG animacija ovdje -->
+                <svg class="unmasking-timeline" width="600" height="700" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Animirana linija (stroke animation) -->
+                    <line class="timeline-path" y2="600" x2="100" y1="50" x1="100" stroke-width="4" stroke="#000000">
+                    <animate attributeName="y2" from="50" to="550" dur="2s" fill="freeze"/>
+                    </line>
+                <!-- Interaktivne točke -->
+                <g class="phase-point" data-phase="1">
+                <circle cx="100" cy="100" r="12" fill="#000000" stroke="#ffffff" stroke-width="3">
+                    <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
+                </circle>
+                <text x="140" y="78" class="phase-title-fr">Démasquer la vérité commence par la curiosité</text>
+                <text x="140" y="105" class="phase-subtitle-fr">Développement & Recherche</text>
+                </g>
+                <g class="phase-point" data-phase="1">
+                    <circle cx="100" cy="200" r="12" fill="#000000" stroke="#ffffff" stroke-width="3">
+                    <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <text x="140" y="182" class="phase-title-fr">Préparer le terrain pour la révélation</text>
+                    <text x="140" y="208" class="phase-subtitle-fr">Pré-production</text>
+                </g>
+                <g class="phase-point" data-phase="1">
+                    <circle cx="100" cy="300" r="12" fill="#000000" stroke="#ffffff" stroke-width="3">
+                    <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <text x="140" y="280" class="phase-title-fr">Capturer des vérités brutes à l'écran</text>
+                    <text x="140" y="306" class="phase-subtitle-fr">Tournage</text>
+                </g>
+                <g class="phase-point" data-phase="1">
+                    <circle cx="100" cy="400" r="12" fill="#000000" stroke="#ffffff" stroke-width="3">
+                    <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <text x="140" y="382" class="phase-title-fr">Assembler le puzzle narratif</text>
+                    <text x="140" y="407" class="phase-subtitle-fr">Post-production & Montage</text>
+                </g>
+                <g class="phase-point" data-phase="1">
+                    <circle cx="100" cy="500" r="12" fill="#000000" stroke="#ffffff" stroke-width="3">
+                    <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <text x="140" y="486" class="phase-title-fr">Amplifier le message dévoilé</text>
+                    <text x="140" y="508" class="phase-subtitle-fr">Distribution & Campagne d'Impact</text>
+                </g>
+                </svg>
               </div>
             </div>
           </div>
-        <div class="Home-Cjelina Cjelina--druga">
+        <div class="Production-Cjelina Cjelina--druga">
             <div class="Home-Lijevo Blok--bijeli">
                 <div class="Blok-unutrasnjost">
                     <h1 class="Naslov--veliki">L2</h1>
@@ -56,7 +139,7 @@
                 </div>
             </div>
         </div>
-        <div class="Home-Cjelina Cjelina--treca">
+        <div class="Production-Cjelina Cjelina--treca">
             <div class="Home-Lijevo Blok--crni">
                 <div class="Blok-unutrasnjost">
                     <h1 class="Naslov--veliki">L3</h1>
@@ -70,7 +153,7 @@
                 </div>
             </div>
         </div>
-        <div class="Home-Cjelina Cjelina--cetvrta">
+        <div class="Production-Cjelina Cjelina--cetvrta">
             <div class="Home-Lijevo Blok--bijeli">
                 <div class="Blok-unutrasnjost">
                     <h1 class="Naslov--veliki">L4</h1>
