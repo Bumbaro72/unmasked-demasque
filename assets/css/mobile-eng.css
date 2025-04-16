@@ -29,6 +29,11 @@ body {
   color: #fff;
 }
 
+.White-Block {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 .Block-Inner {
   text-align: center;
   padding: 2rem;
