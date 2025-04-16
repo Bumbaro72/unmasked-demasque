@@ -1,0 +1,85 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Helvetica, sans-serif;
+}
+
+/* Wrapper za oba jezika */
+.Mobile-Wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Blokovi za ENG i FRA */
+.Mobile-Eng,
+.Mobile-Fra {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Crni i bijeli stilovi */
+.blok-crni {
+  background-color: black;
+  color: white;
+}
+
+.blok-bijeli {
+  background-color: white;
+  color: black;
+}
+
+/* Unutrašnjost */
+.blok-unutrasnjost {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+/* LANDSCAPE prikaz */
+@media screen and (orientation: landscape) {
+  .Mobile-Wrapper {
+    flex-direction: row;
+  }
+}
+
+.home-sadrzaj {
+    padding: 2rem;
+    background-color: black;
+    color: white;
+  }
+  
+  .skriveno {
+    display: none;
+  }
+  
+  .jezik-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .jezik-link.eng {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .jezik-link.fra {
+    background-color: #fff;
+    color: #000;
+  }
+  

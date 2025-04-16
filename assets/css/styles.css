@@ -22,7 +22,8 @@
 }
 
 body {
-    font-family: var(--font-regular);
+    height: 100%;
+    font-family: Helvetica, sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -85,9 +86,7 @@ html {
 
 /* GLAVNI WRAPPER */
 .Stranica {
-    position: relative;
-    z-index: 1;
-    overflow: hidden; /* Sprječava nepotrebno skrolanje */
+    width: 100%;
 }
 
 /* NAVIGACIJA I FOOTER */
@@ -104,8 +103,94 @@ html {
     width: 100%;
     z-index: 1000;
 }
-
-/* Debug klasa - pomoćna za razvoj */
-.debug * {
-    outline: 1px solid red !important;
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  /* Glavni wrapper */
+  .Stranica {
+    width: 100%;
+  }
+  
+  /* Cjelina = jedan red (⬛⬜️ ili obrnuto) */
+  .Home-Cjelina {
+    display: flex;
+    width: 100%;
+    min-height: 100vh; /* svaka "ploča" zauzima visinu ekrana */
+  }
+  
+  /* Blokovi (polovine) */
+  .Blok--crni {
+    background-color: black;
+    color: white;
+  }
+  
+  .Blok--bijeli {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Lijevi i desni blok = 50% */
+  .Home-Lijevo,
+  .Home-Desno {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Unutarnji sadržaj */
+  .Blok-unutrasnjost {
+    padding: 2rem;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  /* Navigation - Split Screen */
+.nav--glavni {
+  display: flex;
+  height: 60px;
+  letter-spacing: 1.0px;
+  z-index: 200;
 }
+
+.nav--lijevo, .nav--deano {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 200;
+}
+
+.nav--lijevo {
+  background-color: white;
+  justify-content: center;
+}
+
+.nav--deano {
+  background-color: black;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.nav--lijevo a {
+  color: black;
+}
+
+.nav--deano a {
+  color: white;
+}
+  
