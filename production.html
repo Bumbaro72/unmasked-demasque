@@ -36,7 +36,7 @@
     <!-- Production  -->
  
     <div class="Stranica">
-        <div class="Production-Cjelina Cjelina--prva efekt-unmasking">
+        <div class="Production-Cjelina Cjelina--prva efekt-unmasking" class="poklopac animacija-na-scroll">
             <div class="mask-lijevo"></div>
             <div class="mask-desno"></div>
             <div class="Production-Lijevo Blok--crni">
@@ -142,7 +142,7 @@
               </div>
             </div>
           </div>
-        <div class="Production-Cjelina Cjelina--druga efekt-unmasking">
+        <div class="Production-Cjelina Cjelina--druga efekt-unmasking" class="poklopac animacija-na-scroll">
             <div class="mask-lijevo"></div>
             <div class="mask-desno"></div>
             <div class="Production-Lijevo Blok--bijeli">
@@ -174,86 +174,124 @@
                         <div class="budzet">
                                 <span class="default-text">BUDGET</span>
                                 <span class="hover-text">FULL TRANSPARENT<br>BUDGET OVERVIEW</span>
-                            </div>
-                    </div> 
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="Production-Desno Blok--crni">
                 <div class="Blok-unutrasnjost">
-                    <!-- SVG kao slika -->
-                    <img src="assets/svg/klapa_clean.svg" alt="Filmska klapa" class="klapa-svg" />
-                    <!-- Animirane linije (možeš dodavati više po želji) -->
-                    <div class="linije">
-                    <svg viewBox="0 0 600 480" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="120" y1="160" x2="494" y2="160" stroke="white" stroke-width="3">
-                            <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
-                            </line>
-                        <line x1="120" y1="260" x2="494" y2="260" stroke="white" stroke-width="3">
-                            <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
-                            </line>
-                        <line x1="120" y1="330" x2="494" y2="330" stroke="white" stroke-width="3">
-                            <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
-                            </line>
-                        <line x1="120" y1="380" x2="494" y2="380" stroke="white" stroke-width="3">
-                            <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
-                            </line>
-                        <line x1="160" y1="-300" x2="260" y2="-300" stroke="white" stroke-width="3" transform="rotate(90)">
-                            <animate attributeName="x2" from="160" to="260" dur="1.2s" begin="0.2s" fill="freeze" />
-                            </line>
-                    </svg>
+                    <div class="klapa-wrapper">
+
+                        <!-- SVG kao slika -->
+                        <img src="assets/svg/klapa_clean.svg" alt="Filmska klapa" class="klapa-svg" />
+                        <!-- Animirane linije (možeš dodavati više po želji) -->
+                        <div class="linije">
+                        <svg viewBox="0 0 600 480" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="120" y1="160" x2="494" y2="160" stroke="white" stroke-width="3">
+                                <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
+                                </line>
+                            <line x1="120" y1="260" x2="494" y2="260" stroke="white" stroke-width="3">
+                                <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
+                                </line>
+                            <line x1="120" y1="330" x2="494" y2="330" stroke="white" stroke-width="3">
+                                <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
+                                </line>
+                            <line x1="120" y1="380" x2="494" y2="380" stroke="white" stroke-width="3">
+                                <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
+                                </line>
+                            <line x1="160" y1="-300" x2="260" y2="-300" stroke="white" stroke-width="3" transform="rotate(90)">
+                                <animate attributeName="x2" from="160" to="260" dur="1.2s" begin="0.2s" fill="freeze" />
+                                </line>
+                        </svg>
+                        </div>
+                        <!-- Tekstualni sloj s hover efektom -->
+                        <div class="budzet">
+                            <span class="default-text">BUDGET</span>
+                            <span class="hover-text">FULL TRANSPARENT<br>BUDGET OVERVIEW</span>
+                        </div>
                     </div>
-                    <!-- Tekstualni sloj s hover efektom -->
-                    <div class="budzet">
-                        <span class="default-text">BUDGET</span>
-                        <span class="hover-text">FULL TRANSPARENT<br>BUDGET OVERVIEW</span>
-                      </div>
-                      
                 </div>
             </div>
         </div>
-        <div class="Production-Cjelina Cjelina--treca">
+        <div class="Production-Cjelina Cjelina--treca efekt-unmasking" class="poklopac animacija-na-scroll">
+            <div class="mask-lijevo"></div>
+            <div class="mask-desno"></div>
             <div class="Production-Lijevo Blok--crni">
                 <div class="Blok-unutrasnjost">
                     <h2>Don’t look further<br>LOOK DEEPER.</h2>
-                <p>Join the Journey of UNMASKED</p>
-                <div class="credits-box">
-                    <div class="film-screen">
-                        <div class="credits-scroll">
-                            <h3>Discover the man behind the legend.</h3>
-                            <br>
-                            <br>
-                            <p> Invest in a story that reveals what we usually hide.<br>  
-                                The face is not a mask – but a mirror of society.<br>
-                                Support a feature-length documentary that changes perspectives
-                            <br>- not just on the face, but on humanity itself.<br>  
-                                This is a project with a universal theme and market potential
-                            <br>and opportunity to stand out financially,creatively, and ethically.</p><br>
-                            <h4>- Thematic relevance</h4><br>
-                            <h4>- Festival potential</h4><br>
-                            <h4>- European co-production</h4><br>
-                            <h4>- Tax Shelter opportunities in Belgium</h4>
-                            <br>
-                            <br>
-                            <h2>We’re not just selling a story
-                            <br>we’re offering you the chance
-                            <br>to be part of the change.</h2>
-                            <br>
-                            <br>
-                            <h3>YOUR LOGO</h3>
-                            <br>
-                            <br>
-                            <br>
+                    <p>Join the Journey of UNMASKED</p>
+                    <div class="credits-box">
+                        <div class="film-screen">
+                            <div class="credits-scroll">
+                                <h3>Discover the man behind the legend.</h3>
+                                <br>
+                                <br>
+                                <p> Invest in a story that reveals what we usually hide.<br>  
+                                    The face is not a mask – but a mirror of society.<br>
+                                    Support a feature-length documentary that changes perspectives
+                                <br>- not just on the face, but on humanity itself.<br>  
+                                    This is a project with a universal theme and market potential
+                                <br>and opportunity to stand out financially,creatively, and ethically.</p><br>
+                                <h4>- Thematic relevance</h4><br>
+                                <h4>- Festival potential</h4><br>
+                                <h4>- European co-production</h4><br>
+                                <h4>- Tax Shelter opportunities in Belgium</h4>
+                                <br>
+                                <br>
+                                <h2>We’re not just selling a story
+                                <br>we’re offering you the chance
+                                <br>to be part of the change.</h2>
+                                <br>
+                                <br>
+                                <h3>YOUR LOGO</h3>
+                                <br>
+                                <br>
+                                <br>
+                            </div>
                         </div>
+                            <h3>This story is moving forward
+                            <br>the question is: will you join us?</h3>
+                        <a href="#" class="cta-button-fr">Join the Journey</a>
                     </div>
-                        <h3>This story is moving forward
-                        <br>the question is: will you join us?</h3>
-                    <a href="#" class="cta-button-fr">Join the Journey</a>
-                </div>
                 </div>
             </div>
             <div class="Production-Desno Blok--bijeli">
                 <div class="Blok-unutrasnjost">
-                    
+                    <h2>Ne cherchez pas plus loin<br>REGARDEZ PLUS PROFONDÉMENT.</h2>
+                    <p>Participez à l'aventure de DÉMASQUÉ</p>
+                    <div class="credits-box">
+                        <div class="film-screen-2">
+                            <div class="credits-scroll-2">
+                                <h3>Discover the man behind the legend.</h3>
+                                <br>
+                                <br>
+                                <p> Invest in a story that reveals what we usually hide.<br>  
+                                    The face is not a mask – but a mirror of society.<br>
+                                    Support a feature-length documentary that changes perspectives
+                                <br>- not just on the face, but on humanity itself.<br>  
+                                    This is a project with a universal theme and market potential
+                                <br>and opportunity to stand out financially,creatively, and ethically.</p><br>
+                                <h4>- Thematic relevance</h4><br>
+                                <h4>- Festival potential</h4><br>
+                                <h4>- European co-production</h4><br>
+                                <h4>- Tax Shelter opportunities in Belgium</h4>
+                                <br>
+                                <br>
+                                <h2>We’re not just selling a story
+                                <br>we’re offering you the chance
+                                <br>to be part of the change.</h2>
+                                <br>
+                                <br>
+                                <h3>YOUR LOGO</h3>
+                                <br>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                            <h3>This story is moving forward
+                            <br>the question is: will you join us?</h3>
+                        <a href="#" class="cta-button-fr">Join the Journey</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -262,6 +300,7 @@
                 <div class="Blok-unutrasnjost">
                     <h1 class="Naslov--veliki">L4</h1>
                     <p class="Tekst--istaknuti">English content here</p>
+                    <img src="assets/svg/festival_start.svg" alt="Festival_1" class="klapa-svg" />
                 </div>
             </div>
             <div class="Production-Desno Blok--crni">
