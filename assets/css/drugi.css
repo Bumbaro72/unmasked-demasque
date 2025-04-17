@@ -405,3 +405,76 @@
   z-index: 1;
   text-align: center;
 }
+
+.Produkcija-Timeline .svg-anim {
+  overflow: hidden;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.klapa-svg {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+  opacity: 0.2; /* ako želiš da djeluje kao pozadinski layer */
+  position: relative; /* ako treba layering */
+}
+
+.cta-btn {
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.cta-btn:hover {
+  background: repeating-conic-gradient(#ccc 0% 25%, #fff 0% 50%) 50% / 20px 20px;
+  color: #000;
+}
+
+.awards-list {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.award-placeholder {
+  background: #eee;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.Blok-unutrasnjost.svg-anim-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* centriranje po širini */
+  justify-content: center;   /* centriranje po visini */
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.svg-anim-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.3; /* po želji */
+}
+
+.svg-anim-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin: 1rem 0;
+}
