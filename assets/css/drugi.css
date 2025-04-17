@@ -378,51 +378,7 @@
   /* ili pokreni curtain efekat ako koristiš animation: ... */
 }
 
-.svg-anim-wrapper {
-  position: relative;
-  overflow: hidden; /* makni scroll */
-  height: 100%;      /* ispuni roditeljski blok */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-}
 
-.svg-anim-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none; /* klikovi ne utječu */
-  opacity: 0.15; /* lagana pozadina, može se kasnije animirati */
-}
-
-.svg-anim-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-}
-
-.Produkcija-Timeline .svg-anim {
-  overflow: hidden;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-
-.klapa-svg {
-  max-width: 80%;
-  height: auto;
-  display: block;
-  margin: 0 auto 1rem;
-  opacity: 0.2; /* ako želiš da djeluje kao pozadinski layer */
-  position: relative; /* ako treba layering */
-}
 
 .cta-btn {
   background: #fff;
@@ -444,6 +400,7 @@
   flex-wrap: wrap;
   margin-top: 1rem;
 }
+
 .award-placeholder {
   background: #eee;
   padding: 0.5rem 1rem;
@@ -451,17 +408,19 @@
   font-size: 0.9rem;
 }
 
-.Blok-unutrasnjost.svg-anim-wrapper {
+/* Glavni wrapper */
+.svg-anim-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;       /* centriranje po širini */
-  justify-content: center;   /* centriranje po visini */
+  align-items: center;
+  justify-content: center;
   position: relative;
   height: 100%;
   overflow: hidden;
   padding: 2rem;
 }
 
+/* Pozadinski SVG sloj */
 .svg-anim-bg {
   position: absolute;
   inset: 0;
@@ -469,12 +428,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.3; /* po želji */
+  pointer-events: none;
+  opacity: 0.15;
 }
 
+.klapa-svg {
+  max-width: 80%;
+  height: auto;
+}
+
+/* Tekstualni slojevi */
 .svg-anim-content {
   position: relative;
   z-index: 1;
   text-align: center;
   margin: 1rem 0;
+}
+
+.kocka-naslov {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.kocka-tekst {
+  font-size: 1rem;
+  opacity: 0.9;
 }
