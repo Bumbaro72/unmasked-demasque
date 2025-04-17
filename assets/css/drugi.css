@@ -89,8 +89,8 @@
   margin: 0;        /* sigurnosno */
 }
 .svg-anim svg {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 95%;
+  max-height: 95%;
   width: auto;
   height: auto;
   display: block;
