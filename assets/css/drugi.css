@@ -377,3 +377,31 @@
   transform: translateY(0);
   /* ili pokreni curtain efekat ako koristiš animation: ... */
 }
+
+.svg-anim-wrapper {
+  position: relative;
+  overflow: hidden; /* makni scroll */
+  height: 100%;      /* ispuni roditeljski blok */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.svg-anim-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none; /* klikovi ne utječu */
+  opacity: 0.15; /* lagana pozadina, može se kasnije animirati */
+}
+
+.svg-anim-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
