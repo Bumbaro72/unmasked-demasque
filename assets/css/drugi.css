@@ -99,7 +99,7 @@
 .svg-anim svg path {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  transition: stroke-dashoffset 2s ease;
+  transition: stroke-dashoffset 4s ease;
 }
 
 .svg-anim.animate-svg svg path {
@@ -180,7 +180,56 @@
 @keyframes drawLine {
   to { stroke-dashoffset: 0; }
 }
+
 /* KLAPA */
+.klapa {
+  width: 600px;
+  height: 500px;
+  margin: 40px auto;
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.klapa-gore {
+  display: flex;
+  height: 160px;
+}
+
+.clapper-left {
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-right: 2px solid #fff;
+}
+
+.klapa-lijevo-en {
+  background: #ffffff;
+  color: #d31b1b;
+  padding: 10px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-right: 2px solid #000000;
+}
+
+.klapa-desno-en {
+  background: #000;
+  color: #fff;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
 .klapa-vrh {
   width: 100%;
   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
@@ -276,7 +325,7 @@
   padding: 20px;
   border: 2px solid #ff0;
   position: relative;
-  transition: all 0.5s;
+  transition: all 2.5s;
 }
 
 .budget-label {
@@ -312,57 +361,6 @@
   font-size: 0.8em;
   color: white;
   margin-top: 5px;
-}
-
-/* CSS */
-.klapa {
-  width: 600px;
-  height: 500px;
-  margin: 40px auto;
-  position: relative;
-  border-radius: 3px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.klapa-gore {
-  display: flex;
-  height: 160px;
-}
-
-.clapper-left {
-  background: #000;
-  color: #fff;
-  padding: 10px;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.2em;
-  border-right: 2px solid #fff;
-}
-
-.klapa-lijevo-en {
-  background: #ffffff;
-  color: #d31b1b;
-  padding: 10px;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.2em;
-  border-right: 2px solid #000000;
-}
-
-.klapa-desno-en {
-  background: #000;
-  color: #fff;
-  flex: 1;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
 }
 
 .normal-view, .hover-view {
