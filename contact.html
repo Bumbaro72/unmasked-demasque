@@ -36,20 +36,51 @@
     <!-- Contact  -->
  
     <div class="Stranica">
-        <div class="Home-Cjelina Cjelina--prva">
-            <div class="Home-Lijevo Blok--crni">
-              <div class="Blok-unutrasnjost">
-                <h1>CONTACT</h1>
-                    <p>Text or form</p>
-              </div>
-            </div>
-            <div class="Home-Desno Blok--bijeli">
-              <div class="Blok-unutrasnjost">
-                <h1>CONTACT</h1>
-                    <p>Text or form</p>
-              </div>
-            </div>
+      <div class="Home-Cjelina Cjelina--prva">
+        
+        <!-- Lijevi crni blok -->
+        <div class="Home-Lijevo Blok--crni">
+          <div class="Blok-unutrasnjost">
+            
+            <!-- CTA ili Citati -->
+            <h2 class="tekst-underline">Get in Touch</h2>
+            <p class="fade-text">We are open to collaborations, screenings, and dialogue. Let us know how you'd like to connect.</p>
+            
+            <!-- ENG forma -->
+            <form name="contact-eng" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact-eng" />
+              <input type="text" name="name" placeholder="Name" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <textarea name="message" placeholder="Message" rows="5" required></textarea>
+              <button type="submit">Send</button>
+            </form>
+    
           </div>
+        </div>
+    
+        <!-- Desni bijeli blok -->
+        <div class="Home-Desno Blok--bijeli">
+          <div class="Blok-unutrasnjost">
+            
+            <!-- CTA FRA -->
+            <h2 class="tekst-underline">Contactez-nous</h2>
+            <p class="fade-text">Ouverts à la collaboration, aux projections et aux dialogues. Dites-nous comment vous souhaitez participer.</p>
+    
+            <!-- FRA forma -->
+            <form name="contact-fra" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact-fra" />
+              <input type="text" name="nom" placeholder="Nom" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <textarea name="message" placeholder="Message" rows="5" required></textarea>
+              <button type="submit">Envoyer</button>
+            </form>
+    
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    
         
     <!-- FOOTER -->
     <footer class="glavni-footer">
