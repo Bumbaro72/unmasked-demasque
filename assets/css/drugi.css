@@ -342,6 +342,11 @@
   cursor: pointer;
   transition: background 0.5s ease, color 0.5s ease;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .budzet .hover-text {
@@ -373,9 +378,27 @@
 }
 
 .budzet:hover .hover-text {
-  display: inline;
+  display: flex;
   opacity: 1;
 }
+
+.klapa-wrapper {
+  position: relative;
+  width: 600px; /* ili auto ako želiš da se klapa skalira s ekranom */
+  height: 480px;
+  margin: 0 auto; /* centriraj na stranici */
+}
+
+.klapa-wrapper .klapa-svg,
+.klapa-wrapper .linije,
+.klapa-wrapper .budzet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+ 
 
 
 .normal-view, .hover-view {
@@ -447,7 +470,7 @@
   overflow: hidden;
   position: relative;
   margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin-bottom: 1rem;
 }
 
 .film-screen-2 {
@@ -522,7 +545,7 @@
 .budzet {
   position: absolute;
   top: 41%;
-  right: 25%;
+  right: 18%;
   z-index: 2;
   padding: 1rem 1.5rem;
   background: #282828;
