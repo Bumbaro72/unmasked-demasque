@@ -417,6 +417,8 @@ button[type="submit"] {
 button:hover {
   opacity: 0.8;
 }
+
+
 .Galerija-Foto {
   display: flex;
   align-items: center;
