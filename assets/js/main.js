@@ -1,3 +1,5 @@
+// Animacija kasnije
+
 const observer = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach(entry => {
@@ -11,9 +13,5 @@ const observer = new IntersectionObserver(
       threshold: 0.5 // najmanje 50% elementa mora ući u viewport
     }
   );
-  
-  document.querySelectorAll('.animacija-na-scroll').forEach(elem => {
-    observer.observe(elem);
-  });
 
   
