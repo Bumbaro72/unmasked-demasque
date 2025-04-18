@@ -417,26 +417,25 @@ button[type="submit"] {
 button:hover {
   opacity: 0.8;
 }
-
 .Galerija-Foto {
   display: flex;
   align-items: center;
   justify-content: center;
-  aspect-ratio: 1 / 1; /* kvadrat */
+  /*! aspect-ratio: 1 / 1; */ /* kvadrat */
   position: relative;
   overflow: hidden;
 }
 
 .foto-placeholder {
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  /*! height: 100%; */
   background-color: #111; /* tamno crna */
-  border: 2px solid white;
+  /*! border: 2px solid white; */
   transition: background-color 0.3s ease, opacity 0.3s ease;
+  margin-top: 0.3em;
 }
 
 .Galerija-Foto:hover .foto-placeholder {
   background-color: rgba(255, 255, 255, 0.1); /* blaga prozirnost */
   opacity: 0.8;
 }
-
