@@ -96,3 +96,48 @@ body, html {
   .svg-anim-bg-time {
     text-decoration-color: aquamarine;
   }
+
+  .mobile-menu {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+  }
+  
+  .menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: block;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    padding: 1rem;
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    border: 1px solid white;
+  }
+  
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: flex;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0.5rem 0;
+  }
+  
+  @media (min-width: 768px) {
+    .mobile-menu {
+      /*! display: none; */
+    }
+  }
+  
