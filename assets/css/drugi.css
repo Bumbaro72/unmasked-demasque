@@ -401,6 +401,7 @@
   justify-content: center;
   flex-wrap: initial;
   margin-top: 1rem;
+  margin-bottom: -4rem;
 }
 
 .award-placeholder {
@@ -492,12 +493,12 @@
   position: absolute;
   top: 18%;
   left: -2%;
-  transform: translateX(0%);
+  /*! transform: translateX(0%); */
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
   animation: linija-draw 2s ease-out forwards;
   /*! opacity: 0.5; */
-  z-index: 3;
+  z-index: 4;
 }
 
 @keyframes linija-draw {
@@ -508,43 +509,90 @@
 
 .klapa-fora {
   position: absolute;
-  top: 40%;
-  left: 52%;
+  top: 40.1%;
+  left: 49%;
   transform: translateX(0%);
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
   animation: linija-draw 2s ease-out forwards;
   /*! opacity: 0.5; */
   z-index: 3;
-  zoom: 59%;
+  zoom: 57.5%;
 }
 
-.normal-view, .hover-view {
+.klapa-fora-2 {
   position: absolute;
+  top: 40.1%;
+  left: 49%;
+  transform: translateX(0%);
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: linija-draw 2s ease-out forwards;
+  /*! opacity: 0.5; */
+  z-index: 3;
+  zoom: 57.5%;
+}
+
+.klapa-content {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.4s;
-  font-weight: bold;
+  pointer-events: none; /* dozvoljava klik samo za button */
 }
 
-.normal-view2, .hover-view2 {
-  position: absolute;
+.klapa-pattern {
+  background-image: repeating-conic-gradient(#ccc 0% 25%, #fff 0% 50%);
+  background-size: 20px 20px;
+  opacity: 0.5;
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.4s;
-  background: #fff;
-  color: #000;
-  font-weight: bold;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
 }
 
-.hover-view {
-  background: rgba(0,0,0,0.8);
-  color: #ff0;
-  opacity: 0;
+.klapa-button {
+  position: absolute;
+  bottom: 45.9%;
+  left: 49.0%;
+  /*! transform: translateX(-50%); */
+  background-color: #282828;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  z-index: 4;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  width: 33.2%;
+  height: 14%;
 }
+
+.klapa-button:hover {
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+}
+
+.klapa-button:hover::after {
+  content: "FULL TRANSPARENT BUDGET OVERVIEW";
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: black;
+}
+
+.klapa-label {
+  position: absolute;
+  top: 41%;
+  right: 58%;
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  z-index: 6;
+  pointer-events: none;
+}
+
