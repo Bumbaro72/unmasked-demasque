@@ -498,7 +498,7 @@
   stroke-dashoffset: 400;
   animation: linija-draw 2s ease-out forwards;
   /*! opacity: 0.5; */
-  z-index: 4;
+  z-index: 10;
 }
 
 @keyframes linija-draw {
@@ -563,7 +563,7 @@
   padding: 10px 20px;
   font-weight: bold;
   border: none;
-  z-index: 4;
+  z-index: 11;
   cursor: pointer;
   pointer-events: auto;
   transition: all 0.4s ease;
@@ -578,7 +578,6 @@
 }
 
 .klapa-button:hover::after {
-  content: "FULL TRANSPARENT BUDGET OVERVIEW";
   display: block;
   margin-top: 8px;
   font-size: 12px;
