@@ -46,7 +46,7 @@
                         <p>⌛️ Time is money ⏳</p>
                     </div>
                 
-                    <div class="svg-anim-bg">
+                    <div class="svg-anim-bg-time">
                         <!-- SVG ide ovdje -->
                         <svg class="unmasking-timeline" width="600" height="700" xmlns="http://www.w3.org/2000/svg" class="svg-animacija animacija-na-scroll">
                         <!-- Animirana linija (stroke animation) -->
@@ -91,12 +91,6 @@
                         </g>
                     </svg>
                     </div>
-
-                    <div class="svg-anim-content">
-                        <!-- Tekst, dugme, sadržaj -->
-                        <h4>Something [DOWN]</h4>
-                        <p>some text</p>
-                    </div>
                 </div>
             </div>
 
@@ -109,7 +103,7 @@
                         <p>⌛️ Time is money ⏳</p>
                     </div>
                 
-                    <div class="svg-anim-bg">
+                    <div class="svg-anim-bg-time">
                         <!-- SVG ide ovdje -->
                         <svg class="unmasking-timeline" width="600" height="700" xmlns="http://www.w3.org/2000/svg">
                             <!-- Animirana linija (stroke animation) -->
@@ -168,61 +162,106 @@
             <div class="mask-desno"></div>
             <div class="Production-Lijevo Blok--bijeli">
                 <div class="Blok-unutrasnjost svg-anim-wrapper">
-                    <!-- GORE: Naslov -->
+                    <svg class="klapa-fora"  xmlns="http://www.w3.org/2000/svg">
+                       <!-- Transparentno Polje -->
+                            <rect x="0" y="0" width="290" height="180" fill="url(#transparency)" rx="5"/>
+                            <text x="140" y="70" text-anchor="middle" font-size="20" fill="#FF0000" font-weight="bold">FULL TRANSPARENT</text>
+                            <text x="140" y="90" text-anchor="middle" font-size="20" fill="#000000" font-weight="bold">BUDGET OVERVIEW</text>
+                            <defs>
+                                <pattern id="transparency" width="20" height="20" patternUnits="userSpaceOnUse">
+                                  <rect width="10" height="10" fill="#fff"/>
+                                  <rect x="10" y="10" width="10" height="10" fill="#fff"/>
+                                  <rect x="10" y="0" width="10" height="10" fill="#ccc"/>
+                                  <rect x="0" y="10" width="10" height="10" fill="#ccc"/>
+                                </pattern>
+                              </defs>
+                    </svg>
+                    
+                    <!-- SADRŽAJ GORE -->
                     <div class="svg-anim-content naslov">
                         <h2>Budget [UP]</h2>
                         <p>Full transparentan 💸</p>
                     </div>
-                  
-                    <!-- SREDINA: SVG pozadina -->
+                    
+                    <!-- SVG IZNAD -->
+                    
+                            <svg class="klapa-linija-moja" viewBox="0 0 600 480" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="120" y1="160" x2="494" y2="160" stroke="white" stroke-width="2">
+                                    <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
+                                    </line>
+                                <line x1="120" y1="260" x2="494" y2="260" stroke="white" stroke-width="2">
+                                    <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
+                                    </line>
+                                <line x1="120" y1="330" x2="494" y2="330" stroke="white" stroke-width="2">
+                                    <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
+                                    </line>
+                                <line x1="120" y1="380" x2="494" y2="380" stroke="white" stroke-width="2">
+                                    <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
+                                    </line>
+                                <line x1="160" y1="-300" x2="260" y2="-300" stroke="white" stroke-width="2" transform="rotate(90)">
+                                    <animate attributeName="x2" from="160" to="260" dur="1.2s" begin="0.2s" fill="freeze" />
+                                    </line>
+                            </svg>
                     <div class="svg-anim-bg">
-                      <img src="assets/svg/klapa_clean.svg" alt="Filmska klapa" class="klapa-svg" />
-                    </div>
+                        <img src="assets/svg/klapa_clean.svg" alt="Filmska klapa" class="klapa-svg" />
+                      </div>
                   
-                    <!-- DOLJE: Tekst -->
+                    <!-- SADRŽAJ DOLJE -->
                     <div class="svg-anim-content tekst">
                       <p>Full transparentan 🎬</p>
                     </div>
-                  </div>
-                  
-                  
+                </div>
                   
             </div>
             <div class="Production-Desno Blok--crni">
                 <div class="Blok-unutrasnjost svg-anim-wrapper">
-
-                    <div class="svg-anim-content">
-                        <!-- Tekst, dugme, sadržaj -->
-                        <h2>Budget FRA [UP]</h2>
+                    <svg class="klapa-fora"  xmlns="http://www.w3.org/2000/svg">
+                       <!-- Transparentno Polje -->
+                            <rect x="0" y="0" width="290" height="180" fill="url(#transparency)" rx="5"/>
+                            <text x="140" y="70" text-anchor="middle" font-size="20" fill="#FF0000" font-weight="bold">FULL TRANSPARENT</text>
+                            <text x="140" y="90" text-anchor="middle" font-size="20" fill="#000000" font-weight="bold">BUDGET OVERVIEW</text>
+                            <defs>
+                                <pattern id="transparency" width="20" height="20" patternUnits="userSpaceOnUse">
+                                  <rect width="10" height="10" fill="#fff"/>
+                                  <rect x="10" y="10" width="10" height="10" fill="#fff"/>
+                                  <rect x="10" y="0" width="10" height="10" fill="#ccc"/>
+                                  <rect x="0" y="10" width="10" height="10" fill="#ccc"/>
+                                </pattern>
+                              </defs>
+                    </svg>
+                    
+                    <!-- SADRŽAJ GORE -->
+                    <div class="svg-anim-content naslov">
+                        <h2>Budget [UP]</h2>
                         <p>Full transparentan 💸</p>
                     </div>
-                
+                    
+                    <!-- SVG IZNAD -->
+                    
+                            <svg class="klapa-linija-moja" viewBox="0 0 600 480" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="120" y1="160" x2="494" y2="160" stroke="white" stroke-width="2">
+                                    <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
+                                    </line>
+                                <line x1="120" y1="260" x2="494" y2="260" stroke="white" stroke-width="2">
+                                    <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
+                                    </line>
+                                <line x1="120" y1="330" x2="494" y2="330" stroke="white" stroke-width="2">
+                                    <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
+                                    </line>
+                                <line x1="120" y1="380" x2="494" y2="380" stroke="white" stroke-width="2">
+                                    <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
+                                    </line>
+                                <line x1="160" y1="-300" x2="260" y2="-300" stroke="white" stroke-width="2" transform="rotate(90)">
+                                    <animate attributeName="x2" from="160" to="260" dur="1.2s" begin="0.2s" fill="freeze" />
+                                    </line>
+                            </svg>
                     <div class="svg-anim-bg">
-                        <!-- SVG ide ovdje -->
-                        <svg viewBox="0 -300 600 480" xmlns="http://www.w3.org/2000/svg">
-                            <line x1="120" y1="160" x2="494" y2="160" stroke="white" stroke-width="3">
-                                <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
-                                </line>
-                            <line x1="120" y1="260" x2="494" y2="260" stroke="white" stroke-width="3">
-                                <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
-                                </line>
-                            <line x1="120" y1="330" x2="494" y2="330" stroke="white" stroke-width="3">
-                                <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
-                                </line>
-                            <line x1="120" y1="380" x2="494" y2="380" stroke="white" stroke-width="3">
-                                <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
-                                </line>
-                            <line x1="160" y1="-300" x2="260" y2="-300" stroke="white" stroke-width="3" transform="rotate(90)">
-                                <animate attributeName="x2" from="160" to="260" dur="1.2s" begin="0.2s" fill="freeze" />
-                                </line>
-                        </svg>
                         <img src="assets/svg/klapa_clean.svg" alt="Filmska klapa" class="klapa-svg" />
-                    </div>
-
-                    <div class="svg-anim-content">
-                        <!-- Tekst, dugme, sadržaj -->
-                        <h4>Something [DOWN]</h4>
-                        <p>some text</p>
+                      </div>
+                  
+                    <!-- SADRŽAJ DOLJE -->
+                    <div class="svg-anim-content tekst">
+                      <p>Full transparentan 🎬</p>
                     </div>
                 </div>
 
@@ -233,13 +272,16 @@
             <div class="mask-desno"></div>
             <div class="Production-Lijevo Blok--crni">
                 <div class="Blok-unutrasnjost svg-anim-wrapper">
-                    <!-- GORE: Naslov -->
-                    <div class="svg-anim-content naslov">
-                      <h2>BUDGET</h2>
-                    </div>
+                    
                   
-                    <!-- SREDINA: SVG pozadina -->
-                    <div class="svg-anim-bg">
+                    <!-- SADRŽAJ GORE -->
+                    <div class="svg-anim-content naslov">
+                        <h2>Don't look further<br>LOOK DEEPER.</h2>
+                        <p>Join the Journey of UNMASKED</p>
+                    </div>
+
+                    <!-- SVG IZNAD -->
+                    <div class="svg-anim-bg-cta">
                         <div class="credits-box">
                             <div class="film-screen">
                                 <div class="credits-scroll">
@@ -270,26 +312,27 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                      </div>
                   
-                    <!-- DOLJE: Tekst -->
+                    <!-- SADRŽAJ DOLJE -->
                     <div class="svg-anim-content tekst">
                       <p>Full transparentan 🎬</p>
                     </div>
-                  </div>
-                  
+                </div>
             </div>
+
             <div class="Production-Desno Blok--bijeli">
                 <div class="Blok-unutrasnjost svg-anim-wrapper">
-
-                    <div class="svg-anim-content">
-                        <!-- Tekst, dugme, sadržaj -->
-                        <h2>Don't look further<br>LOOK DEEPER. FRA</h2>
+                    
+                  
+                    <!-- SADRŽAJ GORE -->
+                    <div class="svg-anim-content naslov">
+                        <h2>Don't look further<br>LOOK DEEPER.</h2>
                         <p>Join the Journey of UNMASKED</p>
                     </div>
-                
-                    <div class="svg-anim-bg">
-                        <!-- SVG ide ovdje -->
+
+                    <!-- SVG IZNAD -->
+                    <div class="svg-anim-bg-cta">
                         <div class="credits-box">
                             <div class="film-screen-2">
                                 <div class="credits-scroll-2">
@@ -320,13 +363,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="svg-anim-content">
-                        <!-- Tekst, dugme, sadržaj -->
-                        <h4>This story is moving forward
-                            <br>the question is: will you join us?</h4>
-                        <a href="#" class="cta-button-fr">Join the Journey</a>
+                      </div>
+                  
+                    <!-- SADRŽAJ DOLJE -->
+                    <div class="svg-anim-content tekst">
+                      <p>Full transparentan 🎬</p>
                     </div>
                 </div>
             </div>
@@ -339,20 +380,26 @@
 
                         <div class="svg-anim-content">
                             <!-- Tekst, dugme, sadržaj -->
-                            <h2>Ferstivals [UP]</h2>
-                            <p>Subtitle</p>
+                            <h2>Festivals [UP]</h2>
+                            <p>⌛️ Time is money ⏳</p>
                         </div>
                     
                         <div class="svg-anim-bg">
                             <!-- SVG ide ovdje -->
                             <div class="awards-list">
-                                <div class="award-placeholder">🏆 TBD Award
+                                <div class="award-placeholder">🏆 TBD Festival 1
                                     <img src="assets/svg/festival_start.svg" alt="Festival_1" class="klapa-svg" />
                                 </div>
-                                <div class="award-placeholder">🏆 TBD Festival</div>
-                              </div>
-                              
-                            
+                                <div class="award-placeholder">🏆 TBD Award
+                                    31. World Festival of Underwater Pictures - Antibes (FRA) 2004.
+                                </div> 
+                                <div class="award-placeholder">🏆 TBD Festival 2
+                                    <img src="assets/svg/festival_start.svg" alt="Festival_1" class="klapa-svg" />
+                                </div>
+                                <div class="award-placeholder">🏆 TBD Award
+                                    Međunarodni festival podvodnog filma - Beograd 2004.
+                                </div>
+                            </div>
                         </div>
 
                         <div class="svg-anim-content">
@@ -373,9 +420,22 @@
                 
                     <div class="svg-anim-bg">
                         <!-- SVG ide ovdje -->
-                        <img src="assets/svg/festival_start.svg" alt="Festival_1" class="klapa-svg" />
+                        <div class="awards-list">
+                            <div class="award-placeholder">🏆 TBD Festival 1
+                                <img src="assets/svg/festival_start.svg" alt="Festival_1" class="klapa-svg" />
+                            </div>
+                            <div class="award-placeholder">🏆 TBD Award
+                                31. World Festival of Underwater Pictures - Antibes (FRA) 2004.
+                            </div> 
+                            <div class="award-placeholder">🏆 TBD Festival 2
+                                <img src="assets/svg/festival_start.svg" alt="Festival_1" class="klapa-svg" />
+                            </div>
+                            <div class="award-placeholder">🏆 TBD Award
+                                Međunarodni festival podvodnog filma - Beograd 2004.
+                            </div>
+                        </div>
                     </div>
-
+                    
                     <div class="svg-anim-content">
                         <!-- Tekst, dugme, sadržaj -->
                         <h4>Something [DOWN]</h4>

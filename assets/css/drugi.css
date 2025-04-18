@@ -278,24 +278,26 @@
 
 .film-screen {
   zoom: 0.9;
-  background: #080808fc;
+  background: #1a1a1afc;
   border: 2px solid rgba(129, 129, 129, 0.582);  /* Filmski okvir */
-  height: 400px;
+  height: 320px;
   overflow: hidden;
   position: relative;
   margin-top: 6rem;
   margin-bottom: 1rem;
+  width: 600px;
 }
 
 .film-screen-2 {
   zoom: 0.9;
   background: #EDEDED;
   border: 2px solid rgba(129, 129, 129, 0.582);  /* Filmski okvir */
-  height: 400px;
+  height: 320px;
   overflow: hidden;
   position: relative;
   margin-top: 6rem;
   margin-bottom: 1rem;
+  width: 600px;
 }
 
 .film-screen::before {
@@ -303,8 +305,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 1110%;
-  height: 100%;
+  width: 100%;
+  /*! height: 100%; */
   background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200%" height="100%"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="1" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.1"/></svg>');
   pointer-events: none;
 }
@@ -397,7 +399,7 @@
   display: flex;
   gap: 1rem;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: initial;
   margin-top: 1rem;
 }
 
@@ -418,6 +420,7 @@
   padding: 2rem;
   position: relative;
   overflow: hidden;
+  zoom: 90%;
 }
 
 /* POZADINSKI SVG */
@@ -427,7 +430,26 @@
   left: 50%;
   transform: translate(-50%, -100%);
   pointer-events: none;
-  z-index: 0;
+  z-index: 2;
+}
+
+.svg-anim-bg-time {
+  position: relative;
+  top: 105%;
+  left: 65%;
+  transform: translate(-50%, -100%);
+  /*! pointer-events: none; */
+  z-index: 2;
+}
+
+.svg-anim-bg-cta {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  pointer-events: none;
+  z-index: 2;
+  width: 100%;
 }
 
 .klapa-svg {
@@ -454,3 +476,75 @@
   opacity: 0.9;
 }
 
+.klapa-linija {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translateX(-50%);
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: linija-draw 2s ease-out forwards;
+  opacity: 0.5;
+  z-index: 3;
+}
+
+.klapa-linija-moja {
+  position: absolute;
+  top: 18%;
+  left: -2%;
+  transform: translateX(0%);
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: linija-draw 2s ease-out forwards;
+  /*! opacity: 0.5; */
+  z-index: 3;
+}
+
+@keyframes linija-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.klapa-fora {
+  position: absolute;
+  top: 40%;
+  left: 52%;
+  transform: translateX(0%);
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: linija-draw 2s ease-out forwards;
+  /*! opacity: 0.5; */
+  z-index: 3;
+  zoom: 59%;
+}
+
+.normal-view, .hover-view {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+  font-weight: bold;
+}
+
+.normal-view2, .hover-view2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+.hover-view {
+  background: rgba(0,0,0,0.8);
+  color: #ff0;
+  opacity: 0;
+}

@@ -32,8 +32,8 @@ body {
 }
 
 .Blok--crni {
-  background-color: rgb(191, 159, 34);
-  color: rgb(143, 1, 1);
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .Blok--bijeli {

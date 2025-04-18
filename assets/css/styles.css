@@ -89,23 +89,12 @@ html {
   width: 100%;
 }
 
-
 /* Reset */
 * 
 {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-}
-  
- body, html {
-    height: 100%;
-    font-family: Helvetica, sans-serif;
-}
-  
- /* Glavni wrapper */
-.Stranica {
-  width: 100%;
 }
   
   /* Cjelina = jedan red (⬛⬜️ ili obrnuto) */
@@ -160,7 +149,7 @@ box-sizing: border-box;
   height: 100%;
   width: 50%;
   background-color: black;
-  z-index: 2;
+  z-index: 999;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
 }
@@ -294,7 +283,7 @@ nav a {
 }
 
 .Blok--bijeli {
-  background-color: white;
+  background-color: #fff;
 }
 
 
@@ -340,7 +329,7 @@ nav a {
 .Blok-unutrasnjost h4 {
   position: relative;
   display: inline-block;
-  opacity: 0.3;
+  opacity: 0.5;
   transition: opacity 0.4s ease;
 }
 
