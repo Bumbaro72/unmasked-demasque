@@ -138,3 +138,36 @@ body, html {
     }
   }
   
+
+.mask-mob-lijevo,
+.mask-mob-desno {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  z-index: 999;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.mask-mob-lijevo {
+  left: 0;
+  animation-name: maskLijevo;
+}
+
+.mask-mob-desno {
+  right: 0;
+  animation-name: maskDesno;
+}
+
+/* ANIMACIJE */
+@keyframes maskLijevo {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes maskDesno {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
