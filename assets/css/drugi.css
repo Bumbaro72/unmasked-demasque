@@ -374,7 +374,6 @@
 .budzet:hover {
   opacity: 1;
 }
-
 .poklopac {
   opacity: 0;
   transform: translateY(20px);
@@ -387,12 +386,6 @@
   /* ili pokreni curtain efekat ako koristiš animation: ... */
 }
 
-.delay-200 {
-  transition-delay: 0.2s;
-}
-.delay-400 {
-  transition-delay: 0.4s;
-}
 
 
 .cta-btn {
