@@ -57,13 +57,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-// Scroll bar
-  window.addEventListener('scroll', () => {
-    const scrollBar = document.querySelector('.scroll-progress');
-    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollTop = window.scrollY;
-    const scrollPercent = (scrollTop / scrollHeight) * 100;
-    scrollBar.style.height = scrollPercent + '%';
-  });
-
-  
+// Hmburger toggle
