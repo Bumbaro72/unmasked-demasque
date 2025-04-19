@@ -114,48 +114,39 @@ html {
 /* Unutarnji sadržaj */
 
 .Blok-unutrasnjost {
-  max-height: 80vh; /* ili nešto manje, prema potrebi */
-  max-width: 80%;
-  overflow-y: auto;
-  padding-right: 1rem; /* za scrollbar da ne sjeda na tekst */
-  text-align: center;
-  margin: auto;
+max-height: 80vh; /* ili nešto manje, prema potrebi */
+max-width: 80%;
+overflow-y: auto;
+padding-right: 1rem; /* za scrollbar da ne sjeda na tekst */
+text-align: center;
+margin: auto;
 }
 
 .efekt-unmasking {
-  position: relative;
-  overflow: hidden;
+position: relative;
+overflow: hidden;
 }
 
 .mask-lijevo,
 .mask-desno {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 50%;
-  background-color: black;
-  z-index: 999;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-}
-
-.mask-lijevo.start,
-.mask-desno.start {
-  animation-play-state: running;
+position: absolute;
+top: 0;
+height: 100%;
+width: 50%;
+background-color: black;
+z-index: 999;
+animation-duration: 1.5s;
+animation-fill-mode: forwards;
 }
 
 .mask-lijevo {
   left: 0;
   animation-name: maskLijevo;
-  animation: maskLijevo 1.5s forwards;
-  animation-play-state: paused;
 }
 
 .mask-desno {
   right: 0;
   animation-name: maskDesno;
-  animation: maskLijevo 1.5s forwards;
-  animation-play-state: paused;
 }
 
 /* ANIMACIJE */
