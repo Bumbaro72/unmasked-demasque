@@ -171,6 +171,7 @@ overflow-y: auto;
 padding-right: 1rem; /* za scrollbar da ne sjeda na tekst */
 text-align: center;
 margin: auto;
+position: relative;
 }
 
 /* Navigation - Split Screen */
@@ -279,8 +280,10 @@ nav a {
 }
 
 .video-section {
-  width: 100%;
-  padding: 2rem 0;
+  width: 98%;
+  /*! padding: 2rem 0; */
+  height: 88%;
+  margin-top: 4rem;
 }
 
 .video-player {
@@ -426,10 +429,10 @@ button:hover {
   z-index: 9900; /* iznad svega osim navigacije ako je 10000 */
   opacity: 1;
   pointer-events: none;
-  transition: opacity 1s ease-in;
+  transition: opacity 0.2s;
 }
 
 #fade-overlay.fade-out {
   opacity: 0;
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.1s ease-out;
 }

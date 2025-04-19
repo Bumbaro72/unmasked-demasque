@@ -23,29 +23,47 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // FADE in/out
-  const fadeOverlay = document.getElementById('fade-overlay');
+ 
+  document.addEventListener("DOMContentLoaded", () => {
+    const fadeOverlay = document.getElementById('fade-overlay');
 
-  // FADE IN
-  window.addEventListener('load', () => {
-    fadeOverlay.classList.add('fade-out');
-  });
+    // FADE IN: pokreni kad se DOM učita
+    window.requestAnimationFrame(() => {
+      fadeOverlay.classList.add('fade-out');
+    });
 
-  // FADE OUT PRI KLIKOVIMA NA LINKOVE
-  document.querySelectorAll('a').forEach(link => {
-    if (link.getAttribute('target') === '_blank') return; // ignoriraj nove tabove
+    // FADE OUT na klik linka
+    document.querySelectorAll('a').forEach(link => {
+      const href = link.getAttribute('href');
 
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const href = this.getAttribute('href');
+      // Ignoriraj eksterne linkove i #anchor
+      if (
+        !href ||
+        href.startsWith('#') ||
+        link.target === '_blank' ||
+        href.startsWith('http')
+      ) return;
 
-      fadeOverlay.classList.remove('fade-out'); // vrati na crno
-      fadeOverlay.style.opacity = 1;
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
 
-      setTimeout(() => {
-        window.location.href = href;
-      }, 300); // trajanje fade-out animacije
+        fadeOverlay.classList.remove('fade-out');
+        fadeOverlay.style.opacity = 1;
+
+        setTimeout(() => {
+          window.location.href = href;
+        }, 100);
+      });
     });
   });
 
-  
+// Scroll bar
+  window.addEventListener('scroll', () => {
+    const scrollBar = document.querySelector('.scroll-progress');
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollTop = window.scrollY;
+    const scrollPercent = (scrollTop / scrollHeight) * 100;
+    scrollBar.style.height = scrollPercent + '%';
+  });
 
+  
