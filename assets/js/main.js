@@ -1,20 +1,25 @@
 // Animacija kasnije
 
 
-const observer = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('start');
-        observer.unobserve(entry.target); // animira se samo jednom
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom >= 0
+    );
+  }
+
+  function handleScrollAnimation() {
+    const elements = document.querySelectorAll('.animacija-na-scroll');
+    elements.forEach((el) => {
+      if (isElementInViewport(el)) {
+        el.classList.add('animiraj');
+      } else {
+        el.classList.remove('animiraj'); // Ako želiš da se resetira kad izađe iz pogleda
       }
     });
-  },
-  {
-    threshold: 0.5 // najmanje 50% elementa mora ući u viewport
   }
-);
 
-document.querySelectorAll('.animacija-na-scroll').forEach(elem => {
-  observer.observe(elem);
-});
+  window.addEventListener('scroll', handleScrollAnimation);
+  window.addEventListener('load', handleScrollAnimation);
+

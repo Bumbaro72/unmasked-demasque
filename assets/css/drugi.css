@@ -386,8 +386,6 @@
   /* ili pokreni curtain efekat ako koristiš animation: ... */
 }
 
-
-
 .cta-btn {
   background: #fff;
   color: #000;
@@ -595,7 +593,6 @@
 }
 
 .klapa-button:hover::after {
-
   display: block;
   margin-top: 8px;
   font-size: 12px;

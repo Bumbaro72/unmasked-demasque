@@ -57,11 +57,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: var(--base-padding);
 }
 
-.Blok-unutrasnjost {
-    max-width: 80%;
-    margin: auto;
-}
-
 .Blok--crni { background: var(--crna); color: var(--bijela); }
 .Blok--bijeli { background: var(--bijela); color: var(--crna); }
 .Blok--sivi { background: var(--siva); color: var(--crna); }
@@ -88,36 +83,28 @@ html {
 .Stranica {
   width: 100%;
 }
-
-/* Reset */
-* 
-{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
   
-  /* Cjelina = jedan red (⬛⬜️ ili obrnuto) */
-  .Home-Cjelina {
+/* Cjelina = jedan red (⬛⬜️ ili obrnuto) */
+.Home-Cjelina {
   display: flex;
   width: 100%;
   min-height: 100vh; /* svaka "ploča" zauzima visinu ekrana */
 }
   
-  /* Blokovi (polovine) */
-  .Blok--crni {
+/* Blokovi (polovine) */
+.Blok--crni {
   background-color: black;
   color: white;
 }
   
-  .Blok--bijeli {
+.Blok--bijeli {
   background-color: white;
   color: black;
 }
   
 /* Lijevi i desni blok = 50% */
-  .Home-Lijevo,
-  .Home-Desno {
+.Home-Lijevo,
+.Home-Desno {
   width: 50%;
   display: flex;
   align-items: center;
@@ -125,16 +112,14 @@ box-sizing: border-box;
 }
   
 /* Unutarnji sadržaj */
-  .Blok-unutrasnjost {
-  padding: 2rem;
-  max-width: 600px;
-  text-align: center;
-}
-  
-  .Blok-unutrasnjost {
+
+.Blok-unutrasnjost {
   max-height: 80vh; /* ili nešto manje, prema potrebi */
+  max-width: 80%;
   overflow-y: auto;
   padding-right: 1rem; /* za scrollbar da ne sjeda na tekst */
+  text-align: center;
+  margin: auto;
 }
 
 .efekt-unmasking {
@@ -276,16 +261,6 @@ nav a {
   height: 100vh;
 }
 
-
-.Blok--crni {
-  background-color: black;
-}
-
-.Blok--bijeli {
-  background-color: #fff;
-}
-
-
 /* Wrapper */
 .efekt-underline {
   display: inline-block;
@@ -358,11 +333,6 @@ nav a {
 .Blok-unutrasnjost:hover h3::after,
 .Blok-unutrasnjost:hover h4::after {
   width: 100%;
-}
-
-.Blok-unutrasnjost p {
-  opacity: 0.15;
-  transition: opacity 0.8s ease;
 }
 
 .Blok-unutrasnjost:hover p {
