@@ -4,7 +4,7 @@
   function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
     return (
-      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.top <= window.innerHeight &&
       rect.bottom >= 0
     );
   }
@@ -13,10 +13,11 @@
     const elements = document.querySelectorAll('.animacija-na-scroll');
     elements.forEach((el) => {
       if (isElementInViewport(el)) {
-        el.classList.add('animiraj');
+        el.classList.add('start');
       } else {
-        el.classList.remove('animiraj'); // Ako želiš da se resetira kad izađe iz pogleda
+        el.classList.remove('start');
       }
+      
     });
   }
 
