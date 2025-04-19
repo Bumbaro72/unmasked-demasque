@@ -5,137 +5,161 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home – Unmasked</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/drugi.css" />
   <link rel="stylesheet" href="assets/css/style-mobile.css" />
+  <link rel="stylesheet" href="assets/css/mobile-eng.css" />
   <script src="assets/js/main.js"></script>
 </head>
 <body>
 
+    <!--Mobilna Navigacija -->
   <div class="mobile-menu">
     <input type="checkbox" id="menu-toggle" />
     <label for="menu-toggle" class="menu-icon">&#9776;</label>
-    <nav class="menu">
-      <a href="index-mobile.html">Home</a>
-      <a href="overview-eng-mobile.html">Overview</a>
-      <a href="production-eng-mobile.html">Production</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact-eng-mobile.html">Contact</a>
-    </nav>
-  </div>
+        <nav class="menu">
+            <a href="home-eng-mobile.html">Home</a>
+            <a href="overview-eng-mobile.html">Overview</a>
+            <a href="production-eng-mobile.html">Production</a>
+            <a href="gallery-eng-mobile.html">Gallery</a>
+            <a href="contact-eng-mobile.html">Contact</a>
+        </nav>
+    </div>
 
-    <div class="Mobile-Page Mobile-ENG">
-        <div class="Home-Block Black-Block">
-            <div class="Block-Inner">
-
-                <div class="svg-anim-content">
+  <div class="Mobile-Page Mobile-ENG">
+    <div class="Home-Block Black-Block">
+        <div class="Block-Inner">
+            <h1 class="Home-Title">UNMASKED</h1>
+            <p class="Home-Subtitle">An Exploration of Identity</p>
+            <!-- CTA buttons, text, anything else goes here -->
+            <div class="sadrzaj-grid">
+                <div class="sadrzaj-gore">
                     <!-- Tekst, dugme, sadržaj -->
                     <h2>Timeline [UP]</h2>
                     <p>⌛️ Time is money ⏳</p>
                 </div>
-            
-                <div class="svg-anim-bg-time">
+                <div class="sadrzaj-sredina">
                     <!-- SVG ide ovdje -->
-                    <svg class="unmasking-timeline" width="600" height="700" xmlns="http://www.w3.org/2000/svg" class="svg-animacija animacija-na-scroll">
-                    <!-- Animirana linija (stroke animation) -->
-                    <line class="timeline-path" y2="600" x2="100" y1="50" x1="100" stroke-width="4" stroke="#ffffff">
-                    <animate attributeName="y2" from="50" to="550" dur="2s" fill="freeze"/>
-                    </line>
-                    <!-- Interaktivne točke -->
-                    <g class="phase-point" data-phase="1">
-                    <circle cx="100" cy="100" r="12" fill="#ffffff" stroke="#000000" stroke-width="3">
-                        <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
-                    </circle>
-                    <text x="140" y="78" class="phase-title">Unmasking the truth begins with curiosity</text>
-                    <text x="140" y="105" class="phase-subtitle">Development &amp; Research</text>
-                    </g>
-                    <g class="phase-point" data-phase="1">
-                        <circle cx="100" cy="200" r="12" fill="#ffffff" stroke="#000000" stroke-width="3">
-                        <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
-                        </circle>
-                        <text x="140" y="182" class="phase-title">Laying the groundwork for revelation</text>
-                        <text x="140" y="208" class="phase-subtitle">Pre-production</text>
-                    </g>
-                    <g class="phase-point" data-phase="1">
-                        <circle cx="100" cy="300" r="12" fill="#ffffff" stroke="#000000" stroke-width="3">
-                        <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
-                        </circle>
-                        <text x="140" y="280" class="phase-title">Capturing raw truths on camera</text>
-                        <text x="140" y="306" class="phase-subtitle">Principal Photography</text>
-                    </g>
-                    <g class="phase-point" data-phase="1">
-                        <circle cx="100" cy="400" r="12" fill="#ffffff" stroke="#000000" stroke-width="3">
-                        <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
-                        </circle>
-                        <text x="140" y="382" class="phase-title">Crafting the narrative puzzle</text>
-                        <text x="140" y="407" class="phase-subtitle">Post-production & Editing</text>
-                    </g>
-                    <g class="phase-point" data-phase="1">
-                        <circle cx="100" cy="500" r="12" fill="#ffffff" stroke="#000000" stroke-width="3">
-                        <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
-                        </circle>
-                        <text x="140" y="486" class="phase-title">Distribution & Impact Campaign</text>
-                        <text x="140" y="508" class="phase-subtitle">Amplifying the unmasked message</text>
-                    </g>
-                </svg>
-
+                    <svg class="unmasking-timeline" width="500" height="600" xmlns="http://www.w3.org/2000/svg" class="svg-animacija animacija-na-scroll">
+                        <!-- Animirana linija (stroke animation) -->
+                        <line class="timeline-path" y2="600" x2="100" y1="50" x1="100" stroke-width="4" stroke="#ffffff">
+                        <animate attributeName="y2" from="50" to="550" dur="2s" fill="freeze"/>
+                        </line>
+                        <!-- Interaktivne točke -->
+                        <g class="phase-point" data-phase="1">
+                            <circle cx="100" cy="100" r="12" fill="#ffffff" stroke="#000000" stroke-width="3">
+                                <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
+                            </circle>
+                                <text x="140" y="78" class="phase-title">Unmasking the truth begins with curiosity</text>
+                                <text x="140" y="105" class="phase-subtitle">Development &amp; Research</text>
+                        </g>
+                        <g class="phase-point" data-phase="1">
+                            <circle cx="100" cy="200" r="12" fill="#ffffff" stroke="#000000" stroke-width="3">
+                                <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
+                            </circle>
+                                <text x="140" y="182" class="phase-title">Laying the groundwork for revelation</text>
+                                <text x="140" y="208" class="phase-subtitle">Pre-production</text>
+                            </g>
+                        <g class="phase-point" data-phase="1">
+                            <circle cx="100" cy="300" r="12" fill="#ffffff" stroke="#000000" stroke-width="3">
+                                <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
+                            </circle>
+                                <text x="140" y="280" class="phase-title">Capturing raw truths on camera</text>
+                                <text x="140" y="306" class="phase-subtitle">Principal Photography</text>
+                        </g>
+                        <g class="phase-point" data-phase="1">
+                            <circle cx="100" cy="400" r="12" fill="#ffffff" stroke="#000000" stroke-width="3">
+                                <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
+                            </circle>
+                                <text x="140" y="382" class="phase-title">Crafting the narrative puzzle</text>
+                                <text x="140" y="407" class="phase-subtitle">Post-production & Editing</text>
+                        </g>
+                        <g class="phase-point" data-phase="1">
+                            <circle cx="100" cy="500" r="12" fill="#ffffff" stroke="#000000" stroke-width="3">
+                                <animate attributeName="r" values="8;11;8" dur="3s" repeatCount="indefinite"/>
+                            </circle>
+                                <text x="140" y="486" class="phase-title">Distribution & Impact Campaign</text>
+                                <text x="140" y="508" class="phase-subtitle">Amplifying the unmasked message</text>
+                        </g>
+                    </svg>
+                </div>
+                <div class="sadrzaj-dolje">
+                    <!-- Tekst, dugme, sadržaj -->
+                    <h2>Timeline FRA [DOWN]</h2>
+                    <p>⌛️ money is Time ⏳</p>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="Home-Block White-Block">
-          <div class="Block-Inner">
-            <svg class="klapa-fora"  xmlns="http://www.w3.org/2000/svg">
-                <!-- Transparentno Polje -->
-                     <rect x="0" y="0" width="290" height="180" fill="url(#transparency)" rx="5"/>
-                     <text x="140" y="70" text-anchor="middle" font-size="20" fill="#FF0000" font-weight="bold">FULL TRANSPARENT</text>
-                     <text x="140" y="90" text-anchor="middle" font-size="20" fill="#000000" font-weight="bold">BUDGET OVERVIEW</text>
-                     <defs>
-                         <pattern id="transparency" width="20" height="20" patternUnits="userSpaceOnUse">
-                           <rect width="10" height="10" fill="#fff"/>
-                           <rect x="10" y="10" width="10" height="10" fill="#fff"/>
-                           <rect x="10" y="0" width="10" height="10" fill="#ccc"/>
-                           <rect x="0" y="10" width="10" height="10" fill="#ccc"/>
-                         </pattern>
-                       </defs>
-             </svg>
-             
+    </div>
+
+    <div class="Home-Block White-Block">
+        <div class="Block-Inner">
+            <h1 class="Home-Title">UNMASKED</h1>
+            <p class="Home-Subtitle">An Exploration of Identity</p>
+            <!-- CTA buttons, text, anything else goes here -->
+            <div class="sadrzaj-grid">
+                <div class="sadrzaj-gore">
+                    <!-- Tekst, dugme, sadržaj -->
+                    <h2>Budget [UP]</h2>
+                    <p>Full transparentan 💸</p>
+                </div>
+                <div class="sadrzaj-sredina">
+                    <!-- Fora ovdje -->
+                    <div class="klapa-content">
+                        <button class="klapa-button">BUDGET</button>
+                        <svg class="klapa-fora" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Transparentno Polje -->
+                            <rect x="0" y="0" width="350" height="180" fill="url(#transparency)" rx="5"/>
+                            <text x="180" y="60" text-anchor="middle" font-size="30" fill="#FF0000" font-weight="bold">FULL TRANSPARENT</text>
+                            <text x="172" y="128" text-anchor="middle" font-size="22" fill="#FF0000" font-weight="bold">OVERVIEW</text>
+                            <defs>
+                                <pattern id="transparency" width="20" height="20" patternUnits="userSpaceOnUse">
+                                  <rect width="10" height="10" fill="#fff"/>
+                                  <rect x="10" y="10" width="10" height="10" fill="#fff"/>
+                                  <rect x="10" y="0" width="10" height="10" fill="#ccc"/>
+                                  <rect x="0" y="10" width="10" height="10" fill="#ccc"/>
+                                </pattern>
+                              </defs>
+                        </svg>
+                        <div class="klapa-label">PARTNER NAME</div>
+                        <!-- SVG ide ovdje -->
+                        <svg class="klapa-linija-moja" viewBox="0 0 500 480" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="120" y1="160" x2="494" y2="160" stroke="white" stroke-width="2">
+                                <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
+                                </line>
+                            <line x1="120" y1="260" x2="494" y2="260" stroke="white" stroke-width="2">
+                                <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
+                                </line>
+                            <line x1="120" y1="330" x2="494" y2="330" stroke="white" stroke-width="2">
+                                <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
+                                </line>
+                            <line x1="120" y1="380" x2="494" y2="380" stroke="white" stroke-width="2">
+                                <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
+                                </line>
+                            <line x1="160" y1="-300" x2="260" y2="-300" stroke="white" stroke-width="2" transform="rotate(90)">
+                                <animate attributeName="x2" from="160" to="260" dur="1.2s" begin="0.2s" fill="freeze" />
+                                </line>
+                        </svg>
+                        <div class="svg-anim-bg">
+                            <img src="assets/svg/klapa_clean.svg" alt="Filmska klapa" class="klapa-svg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="sadrzaj-dolje">
+                    <!-- Tekst, dugme, sadržaj -->
+                    <h2>Budget [DOWN]</h2>
+                    <p>Full transparentan 💸</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Home-Block Black-Block">
+        <div class="Block-Inner">
+            <h1 class="Home-Title">UNMASKED</h1>
+            <p class="Home-Subtitle">An Exploration of Identity</p>
+            <!-- CTA buttons, text, anything else goes here -->
              <!-- SADRŽAJ GORE -->
              <div class="svg-anim-content naslov">
-                 <h2>Budget [UP]</h2>
-                 <p>Full transparentan 💸</p>
-             </div>
-             
-             <!-- SVG IZNAD -->
-             
-                     <svg class="klapa-linija-moja" viewBox="0 0 600 480" xmlns="http://www.w3.org/2000/svg">
-                         <line x1="120" y1="160" x2="494" y2="160" stroke="white" stroke-width="2">
-                             <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
-                             </line>
-                         <line x1="120" y1="260" x2="494" y2="260" stroke="white" stroke-width="2">
-                             <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
-                             </line>
-                         <line x1="120" y1="330" x2="494" y2="330" stroke="white" stroke-width="2">
-                             <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
-                             </line>
-                         <line x1="120" y1="380" x2="494" y2="380" stroke="white" stroke-width="2">
-                             <animate attributeName="x2" from="120" to="494" dur="1.2s" begin="0.2s" fill="freeze" />
-                             </line>
-                         <line x1="160" y1="-300" x2="260" y2="-300" stroke="white" stroke-width="2" transform="rotate(90)">
-                             <animate attributeName="x2" from="160" to="260" dur="1.2s" begin="0.2s" fill="freeze" />
-                             </line>
-                     </svg>
-             <div class="svg-anim-bg">
-                 <img src="assets/svg/klapa_clean.svg" alt="Filmska klapa" class="klapa-svg" />
-               </div>
-           
-             <!-- SADRŽAJ DOLJE -->
-             <div class="svg-anim-content tekst">
-               <p>Full transparentan 🎬</p>
-             </div>
-            </div>
-        </div>
-        <div class="Home-Block Black-Block">
-          <div class="Block-Inner">
-            <!-- SADRŽAJ GORE -->
-            <div class="svg-anim-content naslov">
                 <h2>Don't look further<br>LOOK DEEPER.</h2>
                 <p>Join the Journey of UNMASKED</p>
             </div>
@@ -178,18 +202,21 @@
             <div class="svg-anim-content tekst">
               <p>Full transparentan 🎬</p>
             </div>
-          </div>
         </div>
-        <div class="Home-Block White-Block">
-            <div class="Block-Inner">
-                <div class="svg-anim-content">
-                    <!-- Tekst, dugme, sadržaj -->
+    </div>
+
+    <div class="Home-Block White-Block">
+        <div class="Block-Inner">
+            <h1 class="Home-Title">UNMASKED</h1>
+            <p class="Home-Subtitle">An Exploration of Identity</p>
+            <!-- CTA buttons, text, anything else goes here -->
+            <div class="sadrzaj-grid">
+                <div class="sadrzaj-gore">
                     <h2>Festivals [UP]</h2>
                     <p>Awards</p>
                 </div>
-            
-                <div class="svg-anim-bg">
-                    <!-- SVG ide ovdje -->
+
+                <div class="sadrzaj-sredina">
                     <div class="awards-list">
                         <div class="award-placeholder">
                             <img src="assets/svg/fest-left.svg" width="15" height="40" alt="Festival_1" class="klapa-svg" />
@@ -224,16 +251,22 @@
                     </div>
                 </div>
 
-                <div class="svg-anim-content">
-                    <!-- Tekst, dugme, sadržaj -->
+                <div class="sadrzaj-dolje">
                     <h4>Something [DOWN]</h4>
                     <p>some text</p>
                 </div>
             </div>
         </div>
-        
     </div>
     
+    <!-- Sljedeći blokovi mogu se dodati ovdje kao odvojeni .Home-Block -->
+    <!--
+    <div class="Home-Block Another-Block">
+      <div class="Block-Inner">
+        ...
+      </div>
+    </div>
+    -->
   </div>
 
 </body>

@@ -106,7 +106,13 @@
   stroke-dashoffset: 0;
 }
 .unmasking-timeline {
-  font-family: 'Inter', sans-serif;
+  zoom: 71%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  margin-top: -4.8rem;
 }
 
 .phase-point {
@@ -396,19 +402,28 @@
 }
 
 .awards-list {
-  display: flex;
+  display: grid;
   gap: 1rem;
   justify-content: center;
   flex-wrap: initial;
-  margin-top: 1rem;
+  margin-top: -4rem;
   margin-bottom: -4rem;
+  zoom: 82%;
 }
 
 .award-placeholder {
-  background: #eee;
+  background: #fff;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-size: 0.9rem;
+}
+
+.award-placeholder-fr {
+  /*! background: #eee; */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #fff;
 }
 
 /* Glavni wrapper */
@@ -421,15 +436,15 @@
   padding: 2rem;
   position: relative;
   overflow: hidden;
-  zoom: 90%;
+  zoom: 0%;
 }
 
 /* POZADINSKI SVG */
 .svg-anim-bg {
-  position: relative;
-  top: 50%;
+  /*! position: relative; */
+  top: -11.4rem;
   left: 50%;
-  transform: translate(-50%, -100%);
+  transform: translate(1%, -218%);
   pointer-events: none;
   z-index: 2;
 }
@@ -451,10 +466,11 @@
   pointer-events: none;
   z-index: 2;
   width: 100%;
+  zoom: 90%;
 }
 
 .klapa-svg {
-  max-width: 80%;
+  max-width: 94%;
   height: auto;
 }
 
@@ -490,15 +506,16 @@
 }
 
 .klapa-linija-moja {
-  position: absolute;
-  top: 18%;
-  left: -2%;
+  position: relative;
+  top: -24rem;
+  left: -16%;
   /*! transform: translateX(0%); */
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
   animation: linija-draw 2s ease-out forwards;
   /*! opacity: 0.5; */
   z-index: 10;
+  width: 109%;
 }
 
 @keyframes linija-draw {
@@ -508,16 +525,16 @@
 }
 
 .klapa-fora {
-  position: absolute;
-  top: 40.1%;
-  left: 49%;
+  position: relative;
+  top: -2.0rem;
+  left: 15.2rem;
   transform: translateX(0%);
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
   animation: linija-draw 2s ease-out forwards;
   /*! opacity: 0.5; */
   z-index: 3;
-  zoom: 57.5%;
+  zoom: 61.5%;
 }
 
 .klapa-fora-2 {
@@ -534,7 +551,7 @@
 }
 
 .klapa-content {
-  position: absolute;
+  /*! position: relative; */
   top: 0;
   left: 0;
   width: 100%;
@@ -554,21 +571,21 @@
 }
 
 .klapa-button {
-  position: absolute;
-  bottom: 45.9%;
-  left: 49.0%;
+  position: relative;
+  bottom: -5.55rem;
+  left: 6.7rem;
   /*! transform: translateX(-50%); */
-  background-color: #282828;
+  background-color: #282828ff;
   color: white;
-  padding: 10px 20px;
+  /*! padding: 10px 20px; */
   font-weight: bold;
   border: none;
   z-index: 11;
   cursor: pointer;
   pointer-events: auto;
   transition: all 0.4s ease;
-  width: 33.2%;
-  height: 14%;
+  width: 43%;
+  height: 9.5%;
 }
 
 .klapa-button:hover {
@@ -578,6 +595,7 @@
 }
 
 .klapa-button:hover::after {
+
   display: block;
   margin-top: 8px;
   font-size: 12px;
@@ -585,13 +603,39 @@
 }
 
 .klapa-label {
-  position: absolute;
-  top: 41%;
-  right: 58%;
+  position: relative;
+  top: 1%;
+  right: 23%;
   font-size: 17px;
   font-weight: 600;
   color: white;
   z-index: 6;
   pointer-events: none;
 }
+.sadrzaj-grid {
+  display: grid;
+  grid-template-rows: 20% 60% 20%;
+  height: 100%;
+  width: 540px;
+}
 
+.sadrzaj-gore,
+.sadrzaj-sredina,
+.sadrzaj-dolje {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Boje za lakše orijentiranje */
+.sadrzaj-gore {
+  /*! background-color: #954646; */ /* svijetlo crveno */
+}
+.sadrzaj-sredina {
+  /*! background-color: #194629; */ /* svijetlo zeleno */
+}
+.sadrzaj-dolje {
+  /*! background-color: #1e2b46; */ /* svijetlo plavo */
+}
