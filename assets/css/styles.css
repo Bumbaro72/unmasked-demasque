@@ -93,7 +93,7 @@ html {
   
 /* Blokovi (polovine) */
 .Blok--crni {
-  background-color: black;
+  background-color: #000;
   color: white;
 }
   
@@ -110,9 +110,48 @@ html {
   align-items: center;
   justify-content: center;
 }
-  
-/* Unutarnji sadržaj */
 
+@keyframes zavjesaLijevo {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes zavjesaDesno {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+
+/* Zavjese */
+.zavjesa-lijevo,
+.zavjesa-desno {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 9990;
+  background-color: #f00;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+.zavjesa-lijevo {
+  left: 0;
+  animation-name: zavjesaLijevo;
+}
+
+.zavjesa-desno {
+  right: 0;
+  animation-name: zavjesaDesno;
+}
+
+.zavjesa-lijevo.start,
+.zavjesa-desno.start {
+  animation-play-state: running;
+}
+
+/* Unutarnji sadržaj */
 .Blok-unutrasnjost {
 max-height: 80vh; /* ili nešto manje, prema potrebi */
 max-width: 80%;
@@ -120,44 +159,6 @@ overflow-y: auto;
 padding-right: 1rem; /* za scrollbar da ne sjeda na tekst */
 text-align: center;
 margin: auto;
-}
-
-.efekt-unmasking {
-position: relative;
-overflow: hidden;
-}
-
-.mask-lijevo,
-.mask-desno {
-position: absolute;
-top: 0;
-height: 100%;
-width: 50%;
-background-color: black;
-z-index: 999;
-animation-duration: 1.5s;
-animation-fill-mode: forwards;
-}
-
-.mask-lijevo {
-  left: 0;
-  animation-name: maskLijevo;
-}
-
-.mask-desno {
-  right: 0;
-  animation-name: maskDesno;
-}
-
-/* ANIMACIJE */
-@keyframes maskLijevo {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
-
-@keyframes maskDesno {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(100%); }
 }
 
 /* Navigation - Split Screen */

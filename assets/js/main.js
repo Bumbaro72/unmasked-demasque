@@ -1,26 +1,24 @@
 // Animacija kasnije
 
+document.addEventListener("DOMContentLoaded", function () {
+  function onScrollAnimation() {
+    const elementi = document.querySelectorAll(".animacija-na-scroll");
+    elementi.forEach((el) => {
+      const top = el.getBoundingClientRect().top;
+      const vidljiv = top < window.innerHeight * 0.9;
+      const zavjese = el.querySelectorAll(".zavjesa-lijevo, .zavjesa-desno");
 
-  function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-      rect.top <= window.innerHeight &&
-      rect.bottom >= 0
-    );
-  }
-
-  function handleScrollAnimation() {
-    const elements = document.querySelectorAll('.animacija-na-scroll');
-    elements.forEach((el) => {
-      if (isElementInViewport(el)) {
-        el.classList.add('start');
-      } else {
-        el.classList.remove('start');
-      }
-      
+      zavjese.forEach(z => {
+        if (vidljiv) {
+          z.classList.add("start");
+        } else {
+          z.classList.remove("start");
+        }
+      });
     });
   }
 
-  window.addEventListener('scroll', handleScrollAnimation);
-  window.addEventListener('load', handleScrollAnimation);
+  window.addEventListener("scroll", onScrollAnimation);
+  onScrollAnimation(); // pokreni odmah
+});
 
