@@ -82,17 +82,6 @@ body, html {
     background-color: #fff;
     color: #000;
   }
-  
-  @media (max-width: 768px) {
-    .efekt-underline .naslov {
-      opacity: 1 !important;
-    }
-  
-    .efekt-underline .naslov::after {
-      display: none;
-    }
-  }
-  
 
   .mobile-menu {
     position: relative;
