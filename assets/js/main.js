@@ -1,11 +1,11 @@
 // Animacija kasnije
 
+
 document.addEventListener("DOMContentLoaded", function () {
   function onScrollAnimation() {
-    const elementi = document.querySelectorAll(".animacija-na-scroll");
-    elementi.forEach((el) => {
-      const top = el.getBoundingClientRect().top;
-      const vidljiv = top < window.innerHeight * 0.9;
+    document.querySelectorAll(".animacija-na-scroll").forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const vidljiv = rect.top < window.innerHeight * 0.9;
       const zavjese = el.querySelectorAll(".zavjesa-lijevo, .zavjesa-desno");
 
       zavjese.forEach(z => {
@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   window.addEventListener("scroll", onScrollAnimation);
+  window.addEventListener("resize", onScrollAnimation);
   onScrollAnimation(); // pokreni odmah
 });
+
 

@@ -49,6 +49,8 @@ h1, h2, h3, h4, h5, h6 {
     height: 100vh;
     width: 100vw;
     scroll-snap-align: start;
+    position: relative;
+    overflow: hidden; /* spriječi izlaženje zavjesa */
 }
 
 [class*="-Lijevo"], [class*="-Desno"] {
@@ -73,6 +75,21 @@ h1, h2, h3, h4, h5, h6 {
     align-items: flex-end;
 }
 
+/* Cjelina = jedan red (⬛⬜️ ili obrnuto) */
+.Home-Cjelina {
+  display: flex;
+  width: 100%;
+  min-height: 100vh; /* svaka "ploča" zauzima visinu ekrana */
+}
+
+/* Galerija Cjeline */
+.Galerija-Cjelina {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh; /* Cijela visina kao ostale cjeline */
+}
+
 /* ====== SCROLL SISTEM ====== */
 html {
     scroll-snap-type: y mandatory;
@@ -84,12 +101,7 @@ html {
   width: 100%;
 }
   
-/* Cjelina = jedan red (⬛⬜️ ili obrnuto) */
-.Home-Cjelina {
-  display: flex;
-  width: 100%;
-  min-height: 100vh; /* svaka "ploča" zauzima visinu ekrana */
-}
+
   
 /* Blokovi (polovine) */
 .Blok--crni {
@@ -221,14 +233,6 @@ nav a {
   .Glavni-Footer {
     display: none;
   }
-}
-
-/* Galerija Cjeline */
-.Galerija-Cjelina {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  min-height: 100vh; /* Cijela visina kao ostale cjeline */
 }
 
 /* Video full width */
