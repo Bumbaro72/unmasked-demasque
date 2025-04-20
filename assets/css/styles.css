@@ -6,8 +6,8 @@
     --siva: #EEEEEE;
     
     /* Tipografija */
-    --font-regular: 'Helvetica Neue', Arial, sans-serif;
-    --font-bold: 'Helvetica Neue Bold', Arial, sans-serif;
+    --font-regular: 'IBM Plex Sans', sans-serif;
+    --font-bold: 'IBM Plex Sans', sans-serif;
     
     /* Razmaci */
     --base-padding: 2rem;
@@ -23,7 +23,7 @@
 
 body {
     height: 100%;
-    font-family: Helvetica, sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
 }
