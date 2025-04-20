@@ -644,7 +644,7 @@
   opacity: 0.8;
   animation: skokniDolje 2s infinite;
   pointer-events: none;
-  z-index: 9800;
+  z-index: 980;
 }
 
 @keyframes skokniDolje {
@@ -668,7 +668,7 @@
   opacity: 0.8;
   animation: skokniDolje 2s infinite;
   pointer-events: none;
-  z-index: 9800;
+  z-index: 980;
 }
 
 @keyframes skokniDolje {

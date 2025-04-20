@@ -141,7 +141,7 @@ html {
   bottom: 0;
   width: 50%;
   height: 100%;
-  z-index: 9990;
+  z-index: 990;
   background-color: #000;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
@@ -179,7 +179,7 @@ margin: auto;
   display: flex;
   height: 60px;
   letter-spacing: 1.0px;
-  z-index: 9999;
+  z-index: 999;
   width: 100%;
   /*! display: flex; */
 }
@@ -260,7 +260,7 @@ nav a {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 999;
 }
 
 /* Sakrij footer na mobilnim verzijama */
@@ -418,20 +418,3 @@ button:hover {
   opacity: 0.8;
 }
 
-#fade-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: black;
-  z-index: 9999;
-  opacity: 1;
-  pointer-events: none;
-  transition: opacity 2s ease-in;
-}
-
-#fade-overlay.fade-out {
-  opacity: 0;
-  transition: opacity 0.1s ease-out;
-}

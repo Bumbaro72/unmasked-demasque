@@ -85,9 +85,9 @@ body, html {
   
   .mobile-menu {
     position: relative;
-    /*! top: 1rem; */
+    top: 0rem;
     left: 1rem;
-    z-index: 1000;
+    z-index: 999;
   }
   
   .menu-icon {
@@ -127,15 +127,14 @@ body, html {
     }
   }
   
-
+.mask-mob-bijeli,
 .mask-mob-lijevo,
 .mask-mob-desno {
   position: absolute;
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
-  z-index: 999;
+
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
 }
@@ -143,17 +142,30 @@ body, html {
 .mask-mob-lijevo {
   left: 0;
   animation-name: maskLijevo;
+  background-color: black;
 }
 
 .mask-mob-desno {
   right: 0;
   animation-name: maskDesno;
+  background-color: black;
+}
+
+.mask-mob-bijeli {
+  left: 0;
+  animation-name: maskLijevo;
+  background-color: white;
 }
 
 /* ANIMACIJE */
 @keyframes maskLijevo {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
+}
+
+@keyframes maskDesno {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
 }
 
 @keyframes maskDesno {

@@ -43,7 +43,7 @@ body, html {
 /* Linkovi - važno! */
 .Mobile-Content {
     position: relative;
-    z-index: 1000; /* Visok z-index */
+    z-index: 999; /* Visok z-index */
 }
 
 .Mobile-Content a {
@@ -85,5 +85,5 @@ body, html {
 .Mobile-Content, .Mobile-Content a {
     pointer-events: auto !important;
     position: relative;
-    z-index: 1000 !important;
+    z-index: 999 !important;
 }
