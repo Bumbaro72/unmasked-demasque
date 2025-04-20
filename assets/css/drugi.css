@@ -481,17 +481,6 @@
   margin: 1rem 0;
 }
 
-.naslov h2 {
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.tekst p {
-  font-size: 1rem;
-  opacity: 0.9;
-}
-
 .klapa-linija {
   position: absolute;
   top: 50%;

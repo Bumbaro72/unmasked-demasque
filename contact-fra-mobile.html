@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home – Unmasked</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/style-mobile.css" />
+  <link rel="stylesheet" href="assets/css/mobile-eng.css" />
+  <link rel="stylesheet" href="assets/css/contact-eng-mobile.css" />
+  <script src="assets/js/main.js"></script>
+</head>
+<body>
+
+    <!--Mobilna Navigacija -->
+  <div class="mobile-menu">
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <nav class="menu">
+            <a href="home-eng-mobile.html">Home</a>
+            <a href="overview-eng-mobile.html">Overview</a>
+            <a href="production-eng-mobile.html">Production</a>
+            <a href="gallery-eng-mobile.html">Gallery</a>
+            <a href="contact-eng-mobile.html">Contact</a>
+        </nav>
+    </div>
+
+    <div class="Mobile-Page Mobile-ENG">
+      <div class="Home-Block White-Block">
+        <div class="Block-Inner">
+          <div class="sadrzaj-grid">
+            <div class="sadrzaj-gore">
+              <h2 class="tekst-underline">Get in Touch</h2>
+              <p class="fade-text">We are open to collaborations, screenings, and dialogue. Let us know how you'd like to connect.</p>
+            </div>
+            <div class="sadrzaj-sredina">
+              <!-- ENG forma -->
+              <form name="contact-eng" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact-eng" />
+                <input type="text" name="name" placeholder="Name" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <textarea name="message" placeholder="Message" rows="5" required></textarea>
+                <button type="submit">Send</button>
+              </form>
+            </div>
+            <div class="sadrzaj-dolje">
+              <h3>Follow us</h3>
+              <p>Social media link</p>
+              <div class="social-links">
+                <a href="#" aria-label="Instagram">📸</a>
+                <a href="#" aria-label="Twitter">🐦</a>
+                <a href="#" aria-label="Vimeo">🎬</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="Home-Block Black-Block">
+        <div class="Block-Inner">
+          <div class="sadrzaj-grid">
+            <div class="sadrzaj-gore">
+              <h2 class="tekst-underline">Contactez-nous</h2>
+              <p class="fade-text">Ouverts à la collaboration, aux projections et aux dialogues. Dites-nous comment vous souhaitez participer.</p>
+            </div>
+            <div class="sadrzaj-sredina">
+              <!-- FRA forma -->
+              <form name="contact-fra" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact-fra" />
+                <input type="text" name="nom" placeholder="Nom" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <textarea name="message" placeholder="Message" rows="5" required></textarea>
+                <button type="submit">Envoyer</button>
+              </form>
+            </div>
+            <div class="sadrzaj-dolje">
+              <h3>Follow us</h3>
+              <p>Social media link</p>
+              <div class="social-links">
+                <a href="#" aria-label="Instagram">📸</a>
+                <a href="#" aria-label="Twitter">🐦</a>
+                <a href="#" aria-label="Vimeo">🎬</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>
