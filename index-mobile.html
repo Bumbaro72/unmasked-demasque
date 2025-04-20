@@ -3,13 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unmasked/Démasqué - Mobile</title>
-    <link rel="stylesheet" href="assets/css/mobile.css">
-    <script src="assets/js/main.js"></script>
+    <title>Unmasked/Démasqué</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Times New Roman', serif;
+            overflow-x: hidden;
+            background-color: #000;
+        }
+        
+        /* Mobilna stranica */
+        .Mobile-Page {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Blokovi */
+        .Black-Box, .White-Box {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 3; /* Iznad maski */
+        }
+        
+        .Black-Box {
+            background-color: #000;
+            color: #fff;
+        }
+        
+        .White-Box {
+            background-color: #fff;
+            color: #000;
+        }
+        
+        /* Linkovi */
+        .Mobile-Content a {
+            font-size: 3rem;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 1rem 2rem;
+            position: relative;
+            z-index: 4;
+        }
+        
+        .link-eng {
+            color: #fff;
+            border: 2px solid #fff;
+        }
+        
+        .link-fra {
+            color: #000;
+            border: 2px solid #000;
+        }
+        
+        /* Responsivnost */
+        @media (orientation: landscape) {
+            .Mobile-Page {
+                flex-direction: row;
+            }
+            
+            .Black-Box, .White-Box {
+                height: 100vh;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
     <div class="Mobile-Page">
         <div class="Black-Box">
             <div class="Mobile-Content">
@@ -22,6 +91,5 @@
             </div>
         </div>
     </div>
-
 </body>
 </html>
