@@ -1,0 +1,173 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Helvetica, sans-serif;
+}
+
+/* Wrapper za oba jezika */
+.Mobile-Wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Blokovi za ENG i FRA */
+.Mobile-Eng,
+.Mobile-Fra {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Crni i bijeli stilovi */
+.blok-crni {
+  background-color: black;
+  color: white;
+}
+
+.blok-bijeli {
+  background-color: white;
+  color: black;
+}
+
+/* Unutrašnjost */
+.blok-unutrasnjost {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+/* LANDSCAPE prikaz */
+@media screen and (orientation: landscape) {
+  .Mobile-Wrapper {
+    flex-direction: row;
+  }
+}
+
+.home-sadrzaj {
+    padding: 2rem;
+    background-color: black;
+    color: white;
+  }
+  
+  .skriveno {
+    display: none;
+  }
+  
+  .jezik-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .jezik-link.eng {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .jezik-link.fra {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  @media (max-width: 768px) {
+    .efekt-underline .naslov {
+      opacity: 1 !important;
+    }
+  
+    .efekt-underline .naslov::after {
+      display: none;
+    }
+  }
+  
+
+  .mobile-menu {
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+  }
+  
+  .menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: block;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    padding: 1rem;
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    border: 1px solid white;
+  }
+  
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: flex;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0.5rem 0;
+  }
+  
+  @media (min-width: 768px) {
+    .mobile-menu {
+      display: flex;
+    }
+  }
+  
+
+.mask-mob-lijevo,
+.mask-mob-desno {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  z-index: 999;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.mask-mob-lijevo {
+  left: 0;
+  animation-name: maskLijevo;
+}
+
+.mask-mob-desno {
+  right: 0;
+  animation-name: maskDesno;
+}
+
+/* ANIMACIJE */
+@keyframes maskLijevo {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes maskDesno {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
