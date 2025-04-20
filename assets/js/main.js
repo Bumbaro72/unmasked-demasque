@@ -1,6 +1,5 @@
 // Animacija kasnije
 
-
 document.addEventListener("DOMContentLoaded", function () {
   function onScrollAnimation() {
     document.querySelectorAll(".animacija-na-scroll").forEach(el => {
@@ -23,4 +22,4 @@ document.addEventListener("DOMContentLoaded", function () {
   onScrollAnimation(); // pokreni odmah
 });
 
-
+// FADE

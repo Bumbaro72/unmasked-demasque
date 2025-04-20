@@ -83,26 +83,15 @@ body, html {
     color: #000;
   }
   
-  @media (max-width: 768px) {
-    .efekt-underline .naslov {
-      opacity: 1 !important;
-    }
-  
-    .efekt-underline .naslov::after {
-      display: none;
-    }
-  }
-  
-
   .mobile-menu {
     position: relative;
-    top: 1rem;
+    /*! top: 1rem; */
     left: 1rem;
     z-index: 1000;
   }
   
   .menu-icon {
-    font-size: 2rem;
+    font-size: 3rem;
     cursor: pointer;
     display: block;
   }

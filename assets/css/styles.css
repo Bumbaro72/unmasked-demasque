@@ -142,7 +142,7 @@ html {
   width: 50%;
   height: 100%;
   z-index: 9990;
-  background-color: #f00;
+  background-color: #000;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
   animation-play-state: paused;
@@ -181,13 +181,32 @@ margin: auto;
   letter-spacing: 1.0px;
   z-index: 9999;
   width: 100%;
+  /*! display: flex; */
 }
+
+.nav--glavni a {
+  list-style: none;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  padding-bottom: 2px;
+}
+
+.nav--lijevo,
+.nav--deano {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /*! gap: 1em; */
+}
+
 
 .nav--lijevo, .nav--deano {
   flex: 1;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  /*! padding: 0 20px; */
   z-index: 200;
 }
 
@@ -199,10 +218,11 @@ margin: auto;
 .nav--deano {
   background-color: black;
   justify-content: center;
+  color: white;
 }
 
 nav a {
-  text-decoration: none;
+
   font-weight: bold;
   margin: 0 10px;
 }
@@ -213,6 +233,21 @@ nav a {
 
 .nav--deano a {
   color: white;
+}
+
+.nav--lijevo a,
+.nav--deano a {
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.nav--lijevo a:hover {
+  border-bottom: 2px solid rgb(0, 0, 0); /* ili neka druga boja ako želiš */
+}
+
+.nav--deano a:hover {
+  border-bottom: 2px solid rgb(255, 255, 255); /* ili neka druga boja ako želiš */
 }
 
 .Glavni-Footer {
@@ -244,8 +279,10 @@ nav a {
 }
 
 .video-section {
-  width: 100%;
-  padding: 2rem 0;
+  width: 98%;
+  /*! padding: 2rem 0; */
+  height: 88%;
+  margin-top: 4rem;
 }
 
 .video-player {
@@ -256,7 +293,6 @@ nav a {
   margin: 0 auto;
 }
 
-
 /* Foto red – 4 bloka */
 .Galerija-FotoRed {
   display: grid;
@@ -264,41 +300,6 @@ nav a {
   grid-template-rows: repeat(2, 1fr);    /* 2 reda */
   width: 100%;
   height: 100vh;
-}
-
-/* Wrapper */
-.efekt-underline {
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* Sam tekst */
-.efekt-underline .naslov {
-  position: relative;
-  display: inline-block;
-  opacity: 0.5;
-  transition: opacity 0.4s ease;
-}
-
-/* UNDERLINE */
-.efekt-underline .naslov::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  height: 2px;
-  width: 0%;
-  background-color: currentColor;
-  transition: width 0.4s ease;
-}
-
-/* TRIGGER preko roditelja */
-.efekt-underline:hover .naslov {
-  opacity: 1;
-}
-
-.efekt-underline:hover .naslov::after {
-  width: 100%;
 }
 
 /* Sve heading vrijednosti unutar Blok-unutrasnjost */
@@ -415,4 +416,22 @@ button:hover {
 .Galerija-Foto:hover .foto-placeholder {
   background-color: rgba(255, 255, 255, 0.1); /* blaga prozirnost */
   opacity: 0.8;
+}
+
+#fade-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  z-index: 9999;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 2s ease-in;
+}
+
+#fade-overlay.fade-out {
+  opacity: 0;
+  transition: opacity 0.1s ease-out;
 }
