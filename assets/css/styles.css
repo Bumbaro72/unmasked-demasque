@@ -6,8 +6,8 @@
     --siva: #EEEEEE;
     
     /* Tipografija */
-    --font-regular: 'IBM Plex Sans', sans-serif;
-    --font-bold: 'IBM Plex Sans', sans-serif;
+    --font-regular: 'Rubik', sans-serif;
+    --font-bold: 'Rubik', sans-serif;
     
     /* Razmaci */
     --base-padding: 2rem;
@@ -23,14 +23,14 @@
 
 body {
     height: 100%;
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
 }
 
 /* ====== TIPOGRAFIJA ====== */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     letter-spacing: 0.01em; /* lagana čitljivost */
     word-spacing: 0.05em;   /* bolji ritam */
     line-height: 1.24;      /* Visina linije */
@@ -59,8 +59,8 @@ h3 {
 }
 
 h4 {
-  font-size: 1.3rem;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 300;
   margin-top: 1.2rem;
   margin-bottom: 0rem;
 }
