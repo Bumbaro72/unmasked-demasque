@@ -30,9 +30,53 @@ body {
 
 /* ====== TIPOGRAFIJA ====== */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
-    line-height: 1.2;
-    margin-bottom: var(--base-margin);
+    font-family: 'IBM Plex Sans', sans-serif;
+    letter-spacing: 0.01em; /* lagana čitljivost */
+    word-spacing: 0.05em;   /* bolji ritam */
+    line-height: 1.24;      /* Visina linije */
+    word-break: break-word;
+}
+
+h1 {
+  font-size: 3.3rem;
+  font-weight: 600;
+  margin-top: 3.5rem;
+  margin-bottom: 4rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-top: 1.2rem;
+  margin-bottom: 0rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .Naslov--veliki { font-size: 3rem; letter-spacing: 0.5rem; }
