@@ -491,7 +491,7 @@ button:hover {
 }
 
 .hero-sve:hover .hero-eng {
-  clip-path: inset(0 0 0 0); /* otkriva cijeli svg */
+  clip-path: inset(0 0 50% 0); /* otkriva cijeli svg */
 }
 
 .hero-sve:hover .hero-fra {
