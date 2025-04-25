@@ -467,8 +467,31 @@ button:hover {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  cursor: pointer;
 }
+
+
+/* Trigger zone - gornji */
+.hero-sve::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Trigger zone - donji */
+.hero-sve::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  z-index: 10;
+}
+
 
 .hero-eng, .hero-fra {
   position: absolute;
@@ -483,18 +506,36 @@ button:hover {
 .hero-eng {
   clip-path: inset(0 0 50% 0); /* gornja polovica vidljiva */
   z-index: 2;
+  transition-delay: 0.1s;
 }
 
 .hero-fra {
   clip-path: inset(50% 0 0 0); /* donja polovica vidljiva */
   z-index: 1;
+  transition-delay: 0.1s;
 }
 
-.hero-sve:hover .hero-eng {
-  clip-path: inset(0 0 50% 0); /* otkriva cijeli svg */
+/* Hover efekt s preciznim triggerima */
+.hover-gore:hover ~ .hero-fra {
+  clip-path: inset(25% 0 0 0); /* pomakni FRA prema gore */
 }
 
-.hero-sve:hover .hero-fra {
-  clip-path: inset(0 0 0 0); /* otkriva cijeli svg */
+.hover-dolje:hover ~ .hero-eng {
+  clip-path: inset(0 0 25% 0); /* pomakni ENG prema dolje */
 }
 
+/* Hover zone postavke */
+.hover-zone {
+  position: absolute;
+  width: 99%;
+  height: 45%;
+  z-index: 15;
+}
+
+.hover-gore {
+  bottom: 0;
+}
+
+.hover-dolje {
+  top: 0;
+}
