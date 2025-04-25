@@ -113,6 +113,9 @@
   text-align: center;
   padding: 1rem;
   margin-top: -4.8rem;
+  position: absolute;
+  left: 4rem;
+  top: 16rem;
 }
 
 .phase-point {
@@ -126,7 +129,7 @@
 }
 
 .phase-title {
-  opacity: 0.1;
+  opacity: 0.3;
   font-size: 18px;
   fill: #fff;
   transition: opacity 0.3s;
@@ -141,7 +144,7 @@
 }
 
 .phase-title-fr {
-  opacity: 0.1;
+  opacity: 0.3;
   font-size: 18px;
   fill: #000;
   transition: opacity 0.3s;
@@ -185,6 +188,43 @@
 
 @keyframes drawLine {
   to { stroke-dashoffset: 0; }
+}
+
+.kockice {
+  zoom: 71%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  margin-top: -4.8rem;
+  z-index: 99;
+  fill: #ccc;
+}
+
+.clapper-left {
+  /*! background: #000; */
+  color: #0d00ff;
+  /*! padding: 10px; */
+  flex: 1;
+  display: flex;
+  /*! align-items: center; */
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  /*! border-right: 2px solid #fff; */
+  left: 0rem;
+  position: absolute;
+}
+
+.clap-segment:hover {
+  rect {
+    stroke: #a4a4a4;
+    stroke-dasharray: 5,3;
+  }
+  .clap-content, .clap-content2 {
+    fill: #b01691;
+  }
 }
 
 .action-text {
@@ -439,12 +479,14 @@
 
 /* POZADINSKI SVG */
 .svg-anim-bg {
-  /*! position: relative; */
-  top: -11.4rem;
-  left: 50%;
-  transform: translate(1%, -218%);
+  position: absolute;
+  /*! top: -11.4rem; */
+  /*! left: 50%; */
+  /*! transform: translate(1%, -218%); */
   pointer-events: none;
   z-index: 2;
+  margin-left: -10rem;
+  margin-top: -22rem;
 }
 
 .svg-anim-bg-time {
@@ -468,8 +510,10 @@
 }
 
 .klapa-svg {
-  max-width: 94%;
-  height: auto;
+  /*! max-width: 94%; */
+  /*! height: auto; */
+  /*! margin-bottom: -13rem; */
+  /*! position: relative; */
 }
 
 /* SADRŽAJ */
@@ -494,15 +538,17 @@
 
 .klapa-linija-moja {
   position: relative;
-  top: -24rem;
-  left: -16%;
+  top: 2rem;
+  left: -5.7rem;
   /*! transform: translateX(0%); */
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
   animation: linija-draw 2s ease-out forwards;
   /*! opacity: 0.5; */
   z-index: 10;
-  width: 109%;
+  /*! width: 109%; */
+  margin-top: -19rem;
+  scale: 239%;
 }
 
 @keyframes linija-draw {
@@ -513,15 +559,15 @@
 
 .klapa-fora {
   position: relative;
-  top: -2.0rem;
-  left: 15.2rem;
-  transform: translateX(0%);
+  top: -1.8rem;
+  left: 10.2rem;
+  /*! transform: translateX(0%); */
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
   animation: linija-draw 2s ease-out forwards;
   /*! opacity: 0.5; */
   z-index: 3;
-  zoom: 61.5%;
+  zoom: 80%;
 }
 
 .klapa-fora-2 {
@@ -538,12 +584,13 @@
 }
 
 .klapa-content {
-  /*! position: relative; */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: relative;
+  top: 1.5rem;
+  /*! left: 0; */
+  /*! width: fit-content; */
+  /*! height: 100%; */
   pointer-events: none; /* dozvoljava klik samo za button */
+  scale: 80%;
 }
 
 .klapa-pattern {
@@ -558,9 +605,9 @@
 }
 
 .klapa-button {
-  position: relative;
-  bottom: -5.55rem;
-  left: 6.7rem;
+  position: absolute;
+  bottom: 6.9em;
+  left: 8.3rem;
   /*! transform: translateX(-50%); */
   background-color: #282828ff;
   color: white;
@@ -571,8 +618,8 @@
   cursor: pointer;
   pointer-events: auto;
   transition: all 0.4s ease;
-  width: 43%;
-  height: 9.5%;
+  width: 94%;
+  height: 66.5%;
 }
 
 .klapa-button:hover {
@@ -591,8 +638,8 @@
 
 .klapa-label {
   position: relative;
-  top: 1%;
-  right: 23%;
+  top: 2rem;
+  right: 11rem;
   font-size: 17px;
   font-weight: 600;
   color: white;
@@ -679,4 +726,14 @@
     transform: translateX(-50%) translateY(10px);
     opacity: 1;
   }
+}
+
+.hero-sve {
+  scale: 43%;
+  position: relative;
+  margin-top: -17rem;
+  margin-left: -68rem;
+}
+.hero-fra {
+  z-index: 2;
 }
