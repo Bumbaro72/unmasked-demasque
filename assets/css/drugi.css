@@ -729,10 +729,10 @@
 }
 
 .hero-sve {
-  scale: 43%;
-  position: relative;
-  margin-top: -17rem;
-  margin-left: -68rem;
+  /*! scale: 43%; */
+  /*! position: relative; */
+  /*! margin-top: -17rem; */
+  /*! margin-left: 1rem; */
 }
 .hero-fra {
   z-index: 2;
