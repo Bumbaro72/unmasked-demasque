@@ -22,4 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
   onScrollAnimation(); // pokreni odmah
 });
 
-// FADE
+// SLIDER
+const slider = document.getElementById("slider");
+const eng = document.getElementById("eng");
+
+slider.addEventListener("input", (e) => {
+  const val = e.target.value;
+  eng.style.clipPath = `inset(0 0 ${100 - val}% 0)`;
+});

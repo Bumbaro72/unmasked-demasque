@@ -39,12 +39,12 @@
         <div class="Cjelina--prva animacija-na-scroll">
             <div class="zavjesa-lijevo"></div>
             <div class="zavjesa-desno"></div>
-            <section class="hero-sve" id="cijelo">
-                <div class="hover-zone hover-dolje"></div>
-                <div class="hover-zone hover-gore"></div>
-                <object class="hero-eng" id="gore" type="image/svg+xml" data="assets/svg/hero-eng.svg"></object>
-                <object class="hero-fra" id="dolje" type="image/svg+xml" data="assets/svg/hero-fra2.svg"></object>
-            </section>
+            <div class="hero-container">
+                <object class="hero-layer" id="fra" type="image/svg+xml" data="assets/svg/hero-fra2.svg"></object>
+                <object class="hero-layer" id="eng" type="image/svg+xml" data="assets/svg/hero-eng.svg"></object>
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider" />
+              </div>
+              
           </div>
         <div class="Cjelina--druga animacija-na-scroll">
             <div class="zavjesa-lijevo"></div>
