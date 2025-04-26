@@ -784,3 +784,70 @@
     clip-path: inset(0 0 50% 0); /* Na mobitelu prikaži gornjih 50% */
   }
 }
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container */
+.hero-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Static ENG background */
+.eng-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #0000ff; /* Plava boja za ENG */
+}
+
+/* French section with mask */
+.fra-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: inset(50% 0 0 0); /* Inicijalno: donjih 50% vidljivo */
+  transition: clip-path 0.5s ease-in-out;
+}
+
+.fra-mask object {
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Omogući hover "kroz" SVG */
+}
+
+/* Hover zones */
+.hover-zone {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  z-index: 10;
+  /* Nevidljive ali osjetljive na hover: */
+  opacity: 0;
+  background: rgba(255,0,0,0.1); /* Samo za debug - može se ukloniti */
+  pointer-events: all; !important
+}
+
+.top-zone {
+  top: 0;
+}
+
+.bottom-zone {
+  bottom: 0;
+}
+
+/* Hover efekti */
+.top-zone:hover ~ .fra-mask {
+  clip-path: inset(100% 0 0 0); /* FRA nestaje */
+}
+
+.bottom-zone:hover ~ .fra-mask {
+  clip-path: inset(0 0 0 0); /* FRA se širi na cijeli ekran */
+}
