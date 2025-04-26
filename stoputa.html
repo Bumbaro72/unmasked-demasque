@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hover Test 40/60</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial;
+    }
+    
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+    
+    /* Plavi statični dio (40%) */
+    .static-top {
+      position: absolute;
+      width: 100%;
+      height: 40%;
+      background: blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+    }
+    
+    /* Crveni donji dio (60%) */
+    .dynamic-bottom {
+      position: absolute;
+      width: 100%;
+      height: 60%;
+      top: 40%;
+      background: red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+      transition: all 0.5s ease;
+    }
+    
+    /* Hover zona (samo za crveni dio) */
+    .hover-zone {
+      position: absolute;
+      width: 100%;
+      height: 60%;
+      top: 40%;
+      z-index: 10;
+      background: rgba(0,255,0,0.1); /* Zelena za debug */
+    }
+    
+    /* Efekti */
+    .hover-zone:hover ~ .dynamic-bottom {
+      transform: translateY(-20px); /* Pomakne se prema gore */
+      background: darkred; /* Promijeni boju */
+      box-shadow: 0 0 20px black; /* Dodaj sjenu */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Prvo statični elementi -->
+    <div class="static-top">
+      STATIČNI PLAVI DIO (40%)
+    </div>
+    
+    <div class="dynamic-bottom">
+      DINAMIČNI CRVENI DIO (60%)
+    </div>
+    
+    <!-- Hover zona (MORA biti nakon elementa kojim upravlja) -->
+    <div class="hover-zone"></div>
+  </div>
+  
+  <script>
+    // Debug
+    const hoverZone = document.querySelector('.hover-zone');
+    const redSection = document.querySelector('.dynamic-bottom');
+    
+    hoverZone.addEventListener('mouseenter', () => {
+      console.log('Hover aktiviran - crveni dio treba reagirati');
+      redSection.textContent = "HOVER AKTIVIRAN!";
+    });
+    
+    hoverZone.addEventListener('mouseleave', () => {
+      redSection.textContent = "DINAMIČNI CRVENI DIO (60%)";
+    });
+  </script>
+</body>
+</html>
