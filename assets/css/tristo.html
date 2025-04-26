@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SVG Animation Sandbox</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #f0f0f0;
+    }
+    
+    .animation-container {
+      position: relative;
+      width: 1000px;
+      height: 500px;
+    }
+    
+    /* Oba SVG-a su absolute sa transparentnim pozadinama */
+    .svg-animation {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    
+    /* Hover zone */
+    .hover-zone {
+      position: absolute;
+      width: 100%;
+      height: 40%;
+      z-index: 10;
+      opacity: 0.3; /* Samo za vizualizaciju */
+    }
+    
+    .hover-top {
+      top: 0;
+      background: blue;
+    }
+    
+    .hover-bottom {
+      bottom: 0;
+      background: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="animation-container">
+    <!-- SVG animacije -->
+    <object class="svg-animation top-animation" data="assets/svg/hero-eng.svg" type="image/svg+xml"></object>
+    <object class="svg-animation bottom-animation" data="assets/svg/hero-fra2.svg" type="image/svg+xml"></object>
+    
+    <!-- Hover zone -->
+    <div class="hover-zone hover-top"></div>
+    <div style="height: 20%;"></div> <!-- Buffer zona -->
+    <div class="hover-zone hover-bottom"></div>
+  </div>
+
+  <script>
+    // Kontrola animacija preko JavaScripta
+    const topZone = document.querySelector('.hover-top');
+    const bottomZone = document.querySelector('.hover-bottom');
+    const topSvg = document.querySelector('.top-animation');
+    const bottomSvg = document.querySelector('.bottom-animation');
+
+    // Inicijalizacija
+    document.addEventListener('DOMContentLoaded', () => {
+      // Load SVG-ove i pripremi animacije
+      topSvg.addEventListener('load', initAnimations);
+      bottomSvg.addEventListener('load', initAnimations);
+    });
+
+    function initAnimations() {
+      // Hover efekti
+      topZone.addEventListener('mouseenter', () => {
+        console.log('Gornja zona aktivirana');
+        // Pokreni GSAP animaciju za gornji SVG
+      });
+
+      bottomZone.addEventListener('mouseenter', () => {
+        console.log('Donja zona aktivirana');
+        // Pokreni GSAP animaciju za donji SVG
+      });
+    }
+  </script>
+  
+  <!-- GSAP za kompleksnije animacije -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+</body>
+</html>

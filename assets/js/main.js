@@ -23,3 +23,42 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // NEXT
+
+const upper = document.getElementById('upper');
+const lower = document.getElementById('lower');
+const triggerUpper = document.getElementById('trigger-upper');
+const triggerLower = document.getElementById('trigger-lower');
+
+// Animacija za gornji hover
+triggerUpper.addEventListener('mouseenter', () => {
+  gsap.to(lower, { 
+    y: "100%", 
+    duration: 0.5,
+    ease: "power2.out"
+  });
+});
+
+triggerUpper.addEventListener('mouseleave', () => {
+  gsap.to(lower, { 
+    y: "0%", 
+    duration: 0.5,
+    ease: "power2.out"
+  });
+});
+
+// Animacija za donji hover
+triggerLower.addEventListener('mouseenter', () => {
+  gsap.to(upper, { 
+    y: "-100%", 
+    duration: 0.5,
+    ease: "power2.out"
+  });
+});
+
+triggerLower.addEventListener('mouseleave', () => {
+  gsap.to(upper, { 
+    y: "0%", 
+    duration: 0.5,
+    ease: "power2.out"
+  });
+});
