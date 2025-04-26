@@ -23,42 +23,27 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // NEXT
-
-const upper = document.getElementById('upper');
-const lower = document.getElementById('lower');
-const triggerUpper = document.getElementById('trigger-upper');
-const triggerLower = document.getElementById('trigger-lower');
-
-// Animacija za gornji hover
-triggerUpper.addEventListener('mouseenter', () => {
-  gsap.to(lower, { 
-    y: "100%", 
-    duration: 0.5,
-    ease: "power2.out"
+document.addEventListener('DOMContentLoaded', () => {
+  const fraSection = document.querySelector('.hero-fra');
+  const topZone = document.querySelector('.hover-top');
+  const bottomZone = document.querySelector('.hover-bottom');
+  
+  // Gornja zona hover
+  topZone.addEventListener('mouseenter', () => {
+    fraSection.style.clipPath = 'inset(100% 0 0 0)';
+    console.log('Gornja zona aktivirana - FRA nestaje');
   });
-});
-
-triggerUpper.addEventListener('mouseleave', () => {
-  gsap.to(lower, { 
-    y: "0%", 
-    duration: 0.5,
-    ease: "power2.out"
+  
+  // Donja zona hover
+  bottomZone.addEventListener('mouseenter', () => {
+    fraSection.style.clipPath = 'inset(0 0 0 0)';
+    console.log('Donja zona aktivirana - FRA se širi');
   });
-});
-
-// Animacija za donji hover
-triggerLower.addEventListener('mouseenter', () => {
-  gsap.to(upper, { 
-    y: "-100%", 
-    duration: 0.5,
-    ease: "power2.out"
-  });
-});
-
-triggerLower.addEventListener('mouseleave', () => {
-  gsap.to(upper, { 
-    y: "0%", 
-    duration: 0.5,
-    ease: "power2.out"
+  
+  // Reset na mouseleave
+  [topZone, bottomZone].forEach(zone => {
+    zone.addEventListener('mouseleave', () => {
+      fraSection.style.clipPath = 'inset(49.9% 0 0 0)';
+    });
   });
 });
