@@ -727,24 +727,31 @@
     opacity: 1;
   }
 }
-
-.language-container {
+.hero-container {
   position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
 
-.eng-svg, .fra-svg {
+.static-background {
   position: absolute;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Omogući hover kroz SVG */
+  background-color: #621515; /* Zamijeni sa svojim ENG bojom */
 }
 
-.fra-svg {
-  clip-path: inset(50% 0 0 0); /* Inicijalno: donjih 50% */
-  transition: clip-path 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+.fra-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: inset(50% 0 0 0); /* Početno: donjih 50% */
+  transition: clip-path 0.5s ease-in-out;
+}
+
+.fra-mask object {
+  width: 100%;
+  height: 100%;
 }
 
 /* Hover zone */
@@ -752,23 +759,28 @@
   position: absolute;
   width: 100%;
   height: 50%;
-  z-index: 10;
-  opacity: 0; /* Nevidljive, ali osjetljive na hover */
+  z-index: 99;
 }
 
-.hover-top {
+.top-zone {
   top: 0;
 }
 
-.hover-bottom {
+.bottom-zone {
   bottom: 0;
 }
 
 /* Hover efekti */
-.hover-top:hover ~ .fra-svg {
-  clip-path: inset(100% 0 0 0); /* FRA nestaje (50% → 100%) */
+.top-zone:hover ~ .fra-mask {
+  clip-path: inset(100% 0 50 0); /* Skroz dolje */
 }
 
-.hover-bottom:hover ~ .fra-svg {
-  clip-path: inset(0 0 0 0); /* FRA se širi (50% → 0%) */
+.bottom-zone:hover ~ .fra-mask {
+  clip-path: inset(0 0 0 0); /* Skroz gore */
+}
+
+@media (hover: none) {
+  .fra-mask {
+    clip-path: inset(0 0 50% 0); /* Na mobitelu prikaži gornjih 50% */
+  }
 }
