@@ -1,0 +1,66 @@
+/* mobile-fra.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.Mobile-Page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Blokovi za ENG i FRA */
+.Mobile-Eng,
+.Mobile-Fra {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Home-Block {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Black-Block {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.Block-Inner {
+  text-align: center;
+  padding: 2rem;
+}
+
+.Home-Title {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.Home-Subtitle {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+/* Responsive adjustments */
+@media (orientation: landscape) {
+  .Home-Title {
+    font-size: 2rem;
+  }
+
+  .Home-Subtitle {
+    font-size: 1rem;
+  }
+}

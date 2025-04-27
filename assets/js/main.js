@@ -22,6 +22,39 @@ document.addEventListener("DOMContentLoaded", function () {
   onScrollAnimation(); // pokreni odmah
 });
 
+// FADE
+window.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('black-overlay');
+  const topZone = document.getElementById('topZone');
+
+  if (overlay) {
+    // Kod za fade-in pri loadu
+    setTimeout(() => {
+      overlay.classList.add('hidden');
+    }, 100);
+
+    // Kod za fade-out pri kliku
+    document.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        if (link.getAttribute('href').startsWith('#') || link.hasAttribute('download')) {
+          return;
+        }
+        e.preventDefault();
+        overlay.classList.remove('hidden');
+        setTimeout(() => {
+          window.location.href = link.href;
+        }, 50);
+      });
+    });
+  }
+
+  if (topZone) {
+    // Ako koristiš topZone za nešto drugo
+    // Ovdje ide taj kod
+  }
+});
+
+
 // Hero hover
 document.addEventListener('DOMContentLoaded', () => {
   const fraSection = document.querySelector('.hero-fra');
