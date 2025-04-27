@@ -26,6 +26,7 @@ body {
     font-family: 'IBM Plex Sans', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+    letter-spacing: -0.03rem;
 }
 
 /* ====== TIPOGRAFIJA ====== */
@@ -144,8 +145,6 @@ html {
 .Stranica {
   width: 100%;
 }
-  
-
   
 /* Blokovi (polovine) */
 .Blok--crni {
@@ -323,10 +322,10 @@ nav a {
 }
 
 .video-section {
-  width: 98%;
+  width: 70%;
   /*! padding: 2rem 0; */
-  height: 88%;
-  margin-top: 4rem;
+  height: 70%;
+  margin-top: 1rem;
 }
 
 .video-player {

@@ -16,6 +16,15 @@ body {
   min-height: 100vh;
 }
 
+/* Blokovi za ENG i FRA */
+.Mobile-Eng,
+.Mobile-Fra {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .Home-Block {
   width: 100%;
   min-height: 100vh;

@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
   onScrollAnimation(); // pokreni odmah
 });
 
-// NEXT
+// Hero hover
 document.addEventListener('DOMContentLoaded', () => {
   const fraSection = document.querySelector('.hero-fra');
   const topZone = document.querySelector('.hover-top');
