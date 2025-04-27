@@ -5,7 +5,7 @@
   padding: 15px 30px;
   font-size: 1.2em;
   text-decoration: none;
-  background-color: black;
+  background-color: rgb(30, 30, 30);
   color: white;
   border-radius: 5px;
   text-transform: uppercase;
@@ -30,7 +30,7 @@
 }
 
 .cta-button-en:hover {
-  background-color: rgb(221, 221, 221);
+  background-color: rgb(143, 143, 143);
   color: black;
 }
 
@@ -264,8 +264,9 @@
   max-width: 100%;
   position: relative;
   scale: 200%;
-  margin-top: -17rem;
-  margin-left: -1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-bottom: 0.2rem;
 }
 
 .film-screen {
@@ -333,8 +334,8 @@
   justify-content: center;
   flex-wrap: initial;
   margin-top: -14rem;
-  margin-bottom: -4rem;
-  zoom: 59%;
+  margin-bottom: -12rem;
+  zoom: 73%;
 }
 
 .award-placeholder {
