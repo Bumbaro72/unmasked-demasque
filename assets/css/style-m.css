@@ -133,7 +133,7 @@ h6 {
 }
 
 .Block-Inner {
-  padding: 3rem;
+  padding: 1vh;
 }
 
 .Home-Title {
@@ -276,11 +276,11 @@ h6 {
     position: relative;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -11%);
     pointer-events: none;
     z-index: 2;
-    width: 100%;
-    zoom: 80%;
+    /*! width: 100%; */
+    zoom: 68%;
   }
   
   
@@ -290,7 +290,7 @@ h6 {
     position: relative;
     z-index: 1;
     text-align: center;
-    margin: 1rem 0;
+    /*! margin: 1rem 0; */
   }
   
   .klapa-linija-moja {
@@ -337,10 +337,12 @@ h6 {
   
   .klapa-content {
     position: relative;
-    top: 2.5rem;
+    top: 1vw;
     pointer-events: none; /* dozvoljava klik samo za button */
-    scale: 80%;
-    margin-bottom: 1rem;
+    scale: 64%;
+    margin-bottom: 27vw;
+    margin-top: 16vw;
+    left: 1vh;
   }
   
   .klapa-button {
@@ -386,7 +388,7 @@ h6 {
     display: grid;
     grid-template-rows: 20% 60% 20%;
     height: 100%;
-    width: 540px;
+    /*! width: 540px; */
   }
   
   .sadrzaj-gore,
@@ -396,9 +398,11 @@ h6 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 1rem;
-    max-width: 50%;
-    margin-left: 8rem;
+    padding: 1vw;
+    /*! max-width: 55%; */
+    /*! margin-left: 8rem; */
+    top: -1vh;
+    position: relative;
   }
   
   /* Boje za lakše orijentiranje */
@@ -441,10 +445,17 @@ h6 {
     stroke-dashoffset: 0;
   }
   .unmasking-timeline {
-    display: flex;
-    margin-top: -6.8rem;
-    margin-left: -2rem;
-    scale: 82%;
+    /*! display: flex; */
+    /*! top: -28vh; */
+    /*! margin-left: -19vw; */
+    scale: 80%;
+    /*! transform: translateX(10%); */
+    /*! transform: translateY(-116%); */
+    left: 1vw;
+    position: relative;
+    margin-top: 80vh;
+    margin-bottom: -99vh;
+    top: -88vh;
   }
   
   .phase-point {
@@ -590,11 +601,11 @@ h6 {
   }
   
   .lovor {
-    max-width: 100%;
+    /*! max-width: 100%; */
     position: relative;
-    scale: 200%;
-    margin-top: -17rem;
-    margin-left: -1rem;
+    scale: 120%;
+    /*! margin-top: -17rem; */
+    /*! margin-left: -1rem; */
   }
   
   .film-screen {
@@ -658,12 +669,12 @@ h6 {
   
   .awards-list {
     display: grid;
-    gap: 1rem;
-    justify-content: center;
+    /*! gap: 1rem; */
+    /*! justify-content: center; */
     flex-wrap: initial;
-    margin-top: -14rem;
-    margin-bottom: -4rem;
-    zoom: 59%;
+    /*! margin-top: -14rem; */
+    /*! margin-bottom: -4rem; */
+    zoom: 57%;
   }
   
   .award-placeholder {
